@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navbar = () => {
+const index = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-primary bg-dark">
@@ -11,8 +11,8 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <a className="nav-item nav-link active text-primary" href="#">Home <span className="sr-only">(current)</span></a>
-                        {/* <a className="nav-item nav-link text-primary" href="#">Login</a>
-                        <a className="nav-item nav-link text-primary" href="#">Sign-up</a> */}
+                        <a className="nav-item nav-link text-primary" href="#">Listings</a>
+                        <a className="nav-item nav-link text-primary" href="#">Applicants</a>
                     </div>
                 </div>
             </nav>
@@ -20,4 +20,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default index;
