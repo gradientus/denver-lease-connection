@@ -5,8 +5,8 @@ const Main = () => {
     return (
         <div>
             <Navbar>
-                <a className="nav-item nav-link text-primary" href="#">Login</a>
-                <a className="nav-item nav-link text-primary" href="#">Sign-up</a>
+                {/* TODO: dynamically change links based on URL */}
+
             </Navbar>
         </div>
     );

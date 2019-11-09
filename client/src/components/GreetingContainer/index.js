@@ -1,12 +1,15 @@
 import React from 'react';
+import './style.css';
 
 const index = () => {
     return (
         <div>
-            {/* TODO: How do we want to handle navbar between users */}
-            {/* TODO: props to bring in user name  */}
-            <h3 className='Welcome'>Welcome{/*Name of Landlord in here using props*/}</h3>
-            <button type="button" class="btn btn-primary">Add New Listing</button>
+            <div className="jumbotron">
+                {/* TODO: props to bring in user name  */}
+                <h4 className='welcome'>Welcome *(user name here)*{/*Name of Landlord in here using props*/}</h4>
+                <br></br>
+                <button type="button" class="btn btn-primary">Add New Listing</button>
+            </div>
         </div>
     );
 };
