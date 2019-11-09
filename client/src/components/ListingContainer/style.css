@@ -5,3 +5,12 @@ width: 350px;
   margin: 0 auto;
   margin-top: 30px;
     }
+
+
+    .cardHeader {
+      text-align: center;
+    }
+
+    .cardFooter {
+      text-align: center;
+    }
