@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar'
+import GoogleSignIn from '../components/GoogleSignIn';
 
 const Main = () => {
     return (
@@ -8,6 +9,7 @@ const Main = () => {
                 {/* TODO: dynamically change links based on URL */}
 
             </Navbar>
+            <GoogleSignIn />
         </div>
     );
 };

@@ -12,5 +12,6 @@ const listingSchema = new Schema({
 const Listing = mongoose.model("Listing", listingSchema);
 module.exports = Listing;
 
-
+//Use Clouinary - third party service to save images
 //img: {data: Buffer, contentType: String}
+
