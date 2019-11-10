@@ -4,6 +4,7 @@ import Main from "./pages/Main";
 import LandlordListings from "./pages/LandlordListings";
 import LandlordApplicants from "./pages/LandlordApplicants";
 import RenterApplication from "./pages/RenterApplication";
+import LandlordAddListing from "./pages/LandlordAddListing";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div>
         <Route exact path="/" component={Main} />
         <Route exact path="/landlordList" component={LandlordListings} />
+        <Route exact path="/addlisting" component={LandlordAddListing} />
         <Route exact path="/applicants" component={LandlordApplicants} />
         <Route exact path="/renterapp" component={RenterApplication} />
       </div>
