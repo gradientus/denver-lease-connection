@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 import EditBtn from '../EditButton';
 import InactiveBtn from '../InactiveButton';
-import { Col, Card, CardHeader, CardBody, CardFooter, Button } from 'reactstrap';
+import { Col, Card, CardHeader, CardBody, CardFooter } from 'reactstrap';
 
 class index extends Component {
     render() {
