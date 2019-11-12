@@ -102,6 +102,30 @@ const ApplicationForm = () => {
             <option>Wyoming</option>
           </Input>
         </FormGroup>
+        <FormGroup>
+          <Label for="exampleSelectMulti">ZIP</Label>
+          <Input type="text" name="zip" id="zipId" placeholder="80203" />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="exampleSelectMulti">Phone</Label>
+          <Input
+            type="text"
+            name="phone"
+            id="phoneId"
+            placeholder="555-555-5555"
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="exampleSelectMulti">Email</Label>
+          <Input
+            type="text"
+            name="email"
+            id="emailId"
+            placeholder="hello@blobbly.com"
+          />
+        </FormGroup>
 
         <FormGroup>
           <Label for="exampleSelectMulti">Employment Satus</Label>
@@ -112,6 +136,16 @@ const ApplicationForm = () => {
             <option>unemployed</option>
             <option>other</option>
           </Input>
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="exampleSelectMulti">Income</Label>
+          <Input
+            type="number"
+            name="income"
+            id="incomeId"
+            placeholder="55000"
+          />
         </FormGroup>
         <FormGroup>
           <Label for="exampleText">Additional Information</Label>
