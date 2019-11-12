@@ -12,37 +12,37 @@ const bodyParser = require("body-parser");
 //Initialize mongoose
 const mongoose = require("mongoose");
 
-// //*********Google OAuth requirements********
-// const cookieSession = require("cookie-session");
-// const passport = require("passport");
-// const keys = require("./config/keys");
-// require("./models/User");
-// require("./services/passport");
+//*********Google OAuth requirements********
+const cookieSession = require("cookie-session");
+const passport = require("passport");
+const keys = require("./config/keys");
+require("./models/User");
+require("./services/passport");
 
-// mongoose.connect(keys.mongoURI);
+mongoose.connect(keys.mongoURI);
 
-// //middleware, using cookies to handle authentication
-// app.use(
+//middleware, using cookies to handle authentication
+app.use(
 
-//   cookieSession({
-//     //cookie will last 45 days
-//     maxAge: 45 * 24 * 60 * 60 * 1000,
-//     //encrypt the id - the key can be found in the keys.js file
-//     keys: [keys.cookieKey]
-//   })
-// );
+  cookieSession({
+    //cookie will last 45 days
+    maxAge: 45 * 24 * 60 * 60 * 1000,
+    //encrypt the id - the key can be found in the keys.js file
+    keys: [keys.cookieKey]
+  })
+);
 
-// //passport to use cookies to manage auth
-// app.use(passport.initialize());
-// app.use(passport.session());
+//passport to use cookies to manage auth
+app.use(passport.initialize());
+app.use(passport.session());
 
-// //authentication routes
-// require("./routes/authRoutes")(app);
+//authentication routes
+require("./routes/authRoutes")(app);
 
-// //new user landing page routes
-// //require("./routes/landingPage-routes")(app);
+//new user landing page routes
+//require("./routes/landingPage-routes")(app);
 
-// //********************************************
+//********************************************
 
 
 
