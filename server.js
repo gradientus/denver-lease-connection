@@ -27,7 +27,7 @@ app.use(
   cookieSession({
     //cookie will last 45 days
     maxAge: 45 * 24 * 60 * 60 * 1000,
-
+    //encrypt the id - the key can be found in the keys.js file
     keys: [keys.cookieKey]
   })
 );
@@ -38,6 +38,9 @@ app.use(passport.session());
 
 //authentication routes
 require("./routes/authRoutes")(app);
+
+//new user landing page routes
+//require("./routes/landingPage-routes")(app);
 
 //********************************************
 
@@ -64,5 +67,5 @@ db.on("error", error => console.error(error));
 db.once("open", () => console.log("Connected to Mongoose."));
 
 //Listener
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3210;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));

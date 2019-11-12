@@ -1,22 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class index extends Component {
-
-
-    //************************************************ */
-    //Get the query param token from the URL and set it to local storage
-    // componentWillMount() {
-    //     var query = queryString.parse(this.props.location.search);
-    //     if (query.token) {
-    //         window.localStorage.setItem("jwt", query.token);
-    //         this.props.history.push("/");
-    //     }
-    // }
-
-
-
-    render() {
-        return (
+const index = () => {
+    return (
+        <div>
             <div>
                 <a href="/auth/google" class="button">
                     <div>
@@ -51,8 +37,8 @@ class index extends Component {
                     </div>
                 </a>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default index;
