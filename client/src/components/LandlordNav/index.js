@@ -11,9 +11,9 @@ const index = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <a className="nav-item nav-link active text-primary" href="#">Home <span className="sr-only">(current)</span></a>
-                        <a className="nav-item nav-link text-primary" href="#">Listings</a>
-                        <a className="nav-item nav-link text-primary" href="#">Applicants</a>
+                        {/* <a className="nav-item nav-link active text-primary" href="/">Home <span className="sr-only">(current)</span></a> */}
+                        <a className="nav-item nav-link text-primary" href="/landlordList">Listings</a>
+                        <a className="nav-item nav-link text-primary" href="/applicants">Applicants</a>
                     </div>
                 </div>
             </nav>
