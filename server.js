@@ -60,7 +60,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 mongoose.connect(
-  process.env.DATABASE_URL || "mongodb://localhost/denverleaseconnection"
+  process.env.DATABASE_URI || "mongodb://localhost/denverleaseconnection"
 );
 const db = mongoose.connection;
 db.on("error", error => console.error(error));

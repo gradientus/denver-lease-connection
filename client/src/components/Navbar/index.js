@@ -14,6 +14,8 @@ const Navbar = () => {
                         <a className="nav-item nav-link active text-primary" href="/">Home <span className="sr-only">(current)</span></a>
                         <a className="nav-item nav-link text-primary" href="#">Login</a>
                         <a className="nav-item nav-link text-primary" href="#">Sign-up</a>
+                        <a className="nav-item nav-link text-primary" href="/landlordList">Listings</a>
+                        <a className="nav-item nav-link text-primary" href="/applicants">Applicants</a>
                     </div>
                 </div>
             </nav>
