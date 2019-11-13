@@ -7,10 +7,13 @@ const renterSchema = new Schema({
   address: { type: String, required: true },
   city: { type: String, required: true },
   state: { type: String, required: true },
-  ZIP: { type: String, required: true },
+  zip: { type: String, required: true, min: 00501, max: 99950 },
   phone: { type: String, required: true },
   email: { type: String, required: true },
   income: { type: Number, required: true },
+  employment: { type: String, required: true },
+  info: { type: String, required: true },
+  criminal: { type: Boolean, required: true },
   date: { type: Date, default: Date.now }
 });
 
