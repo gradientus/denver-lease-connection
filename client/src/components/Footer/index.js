@@ -8,7 +8,10 @@ const index = () => {
           <div className="row d-flex align-items-center">
             <div className="col-md-4 col-lg-4 text-center "></div>
             <div className="col-md-4 col-lg-4 text-center">
-              <i class="far fa-copyright fa-xs"></i>
+              <sup>
+                {" "}
+                <i class="far fa-copyright fa-xs"></i>
+              </sup>
               Denver Lease Connection
             </div>
 
