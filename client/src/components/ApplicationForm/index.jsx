@@ -1,6 +1,15 @@
 import React from "react";
 import Navbar from "../Navbar";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import {
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormText,
+  Col,
+  Row
+} from "reactstrap";
 
 //TODO: Add the reactstrap stuff
 
@@ -8,6 +17,7 @@ const ApplicationForm = () => {
   return (
     <div>
       <Navbar />
+      <h3>Renter Application</h3>
       <Form>
         <FormGroup>
           <Label for="firstName">First Name</Label>
@@ -99,15 +109,25 @@ const ApplicationForm = () => {
         </FormGroup>
         <FormGroup>
           <Label for="zip">ZIP</Label>
-          <Input type="text" name="zip" id="zipId" placeholder="80202"/>
+          <Input type="text" name="zip" id="zipId" placeholder="80202" />
         </FormGroup>
         <FormGroup>
           <Label for="phone">Phone</Label>
-          <Input type="text" name="phone" id="phoneId" placeholder='303-555-5555'/>
+          <Input
+            type="text"
+            name="phone"
+            id="phoneId"
+            placeholder="303-555-5555"
+          />
         </FormGroup>
         <FormGroup>
           <Label for="email">Email</Label>
-          <Input type="text" name="email" id="emailId" placeholder='hi@poo.com'/>
+          <Input
+            type="text"
+            name="email"
+            id="emailId"
+            placeholder="hi@poo.com"
+          />
         </FormGroup>
         <FormGroup>
           <Label for="employment">Employment Satus</Label>
@@ -121,11 +141,21 @@ const ApplicationForm = () => {
         </FormGroup>
         <FormGroup>
           <Label for="income">Income</Label>
-          <Input type="number" name="income" id="incomeId" placeholder='55000'/>
+          <Input
+            type="number"
+            name="income"
+            id="incomeId"
+            placeholder="55000"
+          />
         </FormGroup>
         <FormGroup>
           <Label for="info">Additional Information</Label>
-          <Input type="textarea" name="info" id="additonalInfoId" placeholder='Any other information you want the landlord to know.'/>
+          <Input
+            type="textarea"
+            name="info"
+            id="additonalInfoId"
+            placeholder="Any other information you want the landlord to know."
+          />
         </FormGroup>
         By clicking submit you are consenting to a criminal background check.
         <Button>Submit</Button>
