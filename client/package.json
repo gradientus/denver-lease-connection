@@ -2,7 +2,9 @@
   "name": "denver-lease-connection",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3210/",
   "dependencies": {
+    "http-proxy-middleware": "^0.20.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"
