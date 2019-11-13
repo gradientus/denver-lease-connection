@@ -12,7 +12,7 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="firstName">First Name</Label>
           <Input
-            type="text  "
+            type="text"
             name="firstName"
             id="firstNameId"
             placeholder="Hugh"
@@ -21,7 +21,7 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="lastName">Last Name</Label>
           <Input
-            type="text  "
+            type="text"
             name="lastName"
             id="lastNameId"
             placeholder="Jaynus"
@@ -30,7 +30,7 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="address">Street Address</Label>
           <Input
-            type="text  "
+            type="text"
             name="address"
             id="addressId"
             placeholder="433 Main St. #2"
@@ -38,16 +38,11 @@ const ApplicationForm = () => {
         </FormGroup>
         <FormGroup>
           <Label for="city">City</Label>
-          <Input
-            type="text  "
-            name="city"
-            id="cityId"
-            placeholder="Edgewater"
-          />
+          <Input type="text" name="city" id="cityId" placeholder="Edgewater" />
         </FormGroup>
         <FormGroup>
           <Label for="state">State</Label>
-          <Input type="select" name="select" id="stateId">
+          <Input type="select" name="state" id="stateId">
             <option>Alabama</option>
             <option>Alaska</option>
             <option>Arizona</option>
@@ -102,10 +97,21 @@ const ApplicationForm = () => {
             <option>Wyoming</option>
           </Input>
         </FormGroup>
-
         <FormGroup>
-          <Label for="exampleSelectMulti">Employment Satus</Label>
-          <Input type="select" name="select" id="employmentId">
+          <Label for="zip">ZIP</Label>
+          <Input type="text" name="zip" id="zipId" placeholder="80202"/>
+        </FormGroup>
+        <FormGroup>
+          <Label for="phone">Phone</Label>
+          <Input type="text" name="phone" id="phoneId" placeholder='303-555-5555'/>
+        </FormGroup>
+        <FormGroup>
+          <Label for="email">Email</Label>
+          <Input type="text" name="email" id="emailId" placeholder='hi@poo.com'/>
+        </FormGroup>
+        <FormGroup>
+          <Label for="employment">Employment Satus</Label>
+          <Input type="select" name="employment" id="employmentId">
             <option>full-time</option>
             <option>part-time</option>
             <option>student</option>
@@ -114,9 +120,14 @@ const ApplicationForm = () => {
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="exampleText">Additional Information</Label>
-          <Input type="textarea" name="text" id="additonalInfoId" />
+          <Label for="income">Income</Label>
+          <Input type="number" name="income" id="incomeId" placeholder='55000'/>
         </FormGroup>
+        <FormGroup>
+          <Label for="info">Additional Information</Label>
+          <Input type="textarea" name="info" id="additonalInfoId" placeholder='Any other information you want the landlord to know.'/>
+        </FormGroup>
+        By clicking submit you are consenting to a criminal background check.
         <Button>Submit</Button>
       </Form>
     </div>
