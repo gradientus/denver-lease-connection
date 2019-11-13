@@ -3,7 +3,6 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
-
 //Initialize Express
 const express = require("express");
 const app = express();
@@ -13,6 +12,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 //*********Google OAuth requirements********
+4;
 const cookieSession = require("cookie-session");
 const passport = require("passport");
 const keys = require("./config/keys");
@@ -23,7 +23,6 @@ mongoose.connect(keys.mongoURI);
 
 //middleware, using cookies to handle authentication
 app.use(
-
   cookieSession({
     //cookie will last 45 days
     maxAge: 45 * 24 * 60 * 60 * 1000,
@@ -44,8 +43,6 @@ require("./routes/authRoutes")(app);
 
 //********************************************
 
-
-
 //Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -56,8 +53,6 @@ if (process.env.NODE_ENV === "production") {
 //Routes
 // const routes = require("./routes");
 // app.use(routes);
-
-
 
 mongoose.connect(
   process.env.DATABASE_URI || "mongodb://localhost/denverleaseconnection"
