@@ -6,9 +6,12 @@ import { Row, Col, InputGroup, InputGroupAddon, Button, Input } from 'reactstrap
 
 
 const index = props => {
+
+    console.log('addListing props are: ' + props);
     return (
 
-        <div>
+
+        <>
             <Row >
                 <Col></Col>
                 <Col className="headingText">
@@ -88,7 +91,7 @@ const index = props => {
                 </Col>
                 <Col></Col>
             </Row>
-        </div>
+        </>
 
     );
 };
