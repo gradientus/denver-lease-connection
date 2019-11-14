@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Navbar";
+import RenterNav from "../RenterNav";
 import {
   Button,
   Form,
@@ -16,7 +16,7 @@ import {
 const ApplicationForm = () => {
   return (
     <div>
-      <Navbar />
+      <RenterNav />
       <h3>Renter Application</h3>
       <Form>
         <FormGroup>
