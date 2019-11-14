@@ -1,68 +1,108 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Denver Lease Connection
 
-## Available Scripts
+Concept: A web application that connects renters and sub-leasors.
 
-In the project directory, you can run:
+## Deployed Application
 
-### `npm start`
+https://denver-lease-connection.herokuapp.com/
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Instructions
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Sub-leasor:
 
-### `npm test`
+1.
+2.
+3.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Renter: 1. 2. 3.
 
-### `npm run build`
+## Built With
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- MongoDB
+- Express
+- React
+- Node
+- JavaScript
+- Reactstrap
+- Google oAuth
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Contributing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
-### `npm run eject`
+## Code of Conduct
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Our Pledge
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In the interest of fostering an open and welcoming environment, we as
+contributors and maintainers pledge to making participation in our project and
+our community a harassment-free experience for everyone, regardless of age, body
+size, disability, ethnicity, gender identity and expression, level of experience,
+nationality, personal appearance, race, religion, or sexual identity and
+orientation.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Our Standards
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Examples of behavior that contributes to creating a positive environment
+include:
 
-## Learn More
+- Using welcoming and inclusive language
+- Being respectful of differing viewpoints and experiences
+- Gracefully accepting constructive criticism
+- Focusing on what is best for the community
+- Showing empathy towards other community members
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Examples of unacceptable behavior by participants include:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The use of sexualized language or imagery and unwelcome sexual attention or
+  advances
+- Trolling, insulting/derogatory comments, and personal or political attacks
+- Public or private harassment
+- Publishing others' private information, such as a physical or electronic
+  address, without explicit permission
+- Other conduct which could reasonably be considered inappropriate in a
+  professional setting
 
-### Code Splitting
+### Our Responsibilities
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Project maintainers are responsible for clarifying the standards of acceptable
+behavior and are expected to take appropriate and fair corrective action in
+response to any instances of unacceptable behavior.
 
-### Analyzing the Bundle Size
+Project maintainers have the right and responsibility to remove, edit, or
+reject comments, commits, code, wiki edits, issues, and other contributions
+that are not aligned to this Code of Conduct, or to ban temporarily or
+permanently any contributor for other behaviors that they deem inappropriate,
+threatening, offensive, or harmful.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Scope
 
-### Making a Progressive Web App
+This Code of Conduct applies both within project spaces and in public spaces
+when an individual is representing the project or its community. Examples of
+representing a project or community include using an official project e-mail
+address, posting via an official social media account, or acting as an appointed
+representative at an online or offline event. Representation of a project may be
+further defined and clarified by project maintainers.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### Enforcement
 
-### Advanced Configuration
+Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported by contacting the project team at Github.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Attribution
 
-### Deployment
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
+available at [http://contributor-covenant.org/version/1/4][version]
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+[homepage]: http://contributor-covenant.org
+[version]: http://contributor-covenant.org/version/1/4/
 
-### `npm run build` fails to minify
+## Authors
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Barbara Whiting** - [Github](https://github.com/)
+**Austin Terry** - [Github](https://github.com/)
+**Phil Mauracher** - [Github](https://github.com/gradientus)
+
+## License
+
+MIT
