@@ -5,7 +5,7 @@ const index = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-primary bg-dark">
-        <a className="navbar-brand text-warning" href="/">
+        <a className="navbar-brand text-warning" href="#">
           Denver Lease Connection
         </a>
         <button
@@ -21,11 +21,14 @@ const index = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link text-white" href="#">
+            <a className="nav-item nav-link text-white" href="/renter">
               See Properties
             </a>
             <a className="nav-item nav-link text-white" href="/renterapp">
               Renter Application
+            </a>
+            <a className="nav-item nav-link text-white" href="/auth/logout">
+              Logout
             </a>
           </div>
         </div>
