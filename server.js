@@ -19,6 +19,8 @@ const keys = require("./config/keys");
 require("./models/User");
 require("./services/passport");
 
+
+
 mongoose.connect(keys.mongoURI);
 
 //middleware, using cookies to handle authentication
@@ -38,8 +40,9 @@ app.use(passport.session());
 //authentication routes
 require("./routes/authRoutes")(app);
 
-//new user landing page routes
-//require("./routes/landingPage-routes")(app);
+
+
+
 
 //********************************************
 
@@ -53,6 +56,7 @@ if (process.env.NODE_ENV === "production") {
 //Routes
 // const routes = require("./routes");
 // app.use(routes);
+require("./routes/listingRoutes");
 
 mongoose.connect(
   process.env.DATABASE_URI || "mongodb://localhost/denverleaseconnection"
