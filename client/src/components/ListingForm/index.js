@@ -7,7 +7,7 @@ import { Row, Col, InputGroup, InputGroupAddon, Button, Input } from 'reactstrap
 
 const index = props => {
 
-    console.log('addListing props are: ' + props);
+    // console.log(props);
     return (
 
 
