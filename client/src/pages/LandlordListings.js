@@ -4,6 +4,10 @@ import Greeting from '../components/GreetingContainer';
 import ListingContainer from '../components/ListingContainer';
 
 class LandlordListings extends Component {
+
+
+
+
     render() {
         return (
             <div>
