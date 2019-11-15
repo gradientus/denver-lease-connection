@@ -24,8 +24,8 @@ class LandlordAddListing extends Component {
         const { name, value } = event.target;
         this.setState({
             [name]: value
-        })
-    }
+        });
+    };
 
     //handle the form submit button
     handleFormSubmit = event => {
@@ -50,7 +50,13 @@ class LandlordAddListing extends Component {
         return (
             <>
                 <LandlordNav />
-                <ListingForm />
+                <ListingForm
+                    propertyName={this.state.propertyName}
+                    details={this.state.details}
+                    price={this.state.price}
+                    handleInputChange={this.handleInputChange}
+                    handleFormSubmit={this.handleFormSubmit}
+                />
             </>
         );
     }
