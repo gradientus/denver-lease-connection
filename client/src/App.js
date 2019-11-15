@@ -6,6 +6,7 @@ import LandlordApplicants from "./pages/LandlordApplicants";
 import RenterApplication from "./pages/RenterApplication";
 import LandlordAddListing from "./pages/LandlordAddListing";
 import RenterLanding from "./pages/RenterLanding";
+import FirstTimeUser from "./pages/FirstTimeUser";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/applicants" component={LandlordApplicants} />
         <Route exact path="/renterapp" component={RenterApplication} />
         <Route exact path="/renter" component={RenterLanding} />
+        <Route exact path="/newUser" component={FirstTimeUser} />
       </div>
     </Router>
   );

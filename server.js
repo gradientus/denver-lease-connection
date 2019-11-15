@@ -45,7 +45,7 @@ app.use(passport.session());
 //authentication routes
 require("./routes/authRoutes")(app);
 
-//********************************************
+
 
 //Middleware
 app.use(express.urlencoded({ extended: true }));
