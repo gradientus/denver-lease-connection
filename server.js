@@ -21,7 +21,9 @@ db.once("open", () => console.log("Connected to Mongoose."));
 //*********Google OAuth requirements********
 const cookieSession = require("cookie-session");
 const passport = require("passport");
-const keys = require("./config/keys");
+if (process.env.NODE_ENV !== "production") {
+  const keys = require("./config/keys");
+}
 require("./models/User");
 require("./services/passport");
 // mongoose.connect(keys.mongoURI); //This is already accounted for above.
