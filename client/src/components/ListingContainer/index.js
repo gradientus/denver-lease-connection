@@ -2,27 +2,49 @@ import React, { Component } from 'react';
 import './style.css';
 import EditBtn from '../EditButton';
 import InactiveBtn from '../InactiveButton';
-import { Col, Card, CardHeader, CardBody, CardFooter } from 'reactstrap';
+import { Row, Col, Card, CardHeader, CardBody, CardFooter } from 'reactstrap';
 
-class index extends Component {
-    render() {
-        return (
 
-            <Col>
+
+const index = props => {
+    return (
+        <div>
+            {/* <Col>
                 <Card>
-                    <CardHeader className='cardHeader'>Property Name</CardHeader>
+                    <CardHeader className='cardHeader'>{props.propertyName}</CardHeader>
                     <CardBody>
                         <img src="https://images.craigslist.org/00101_daosvbG18Yj_600x450.jpg" className="card-img-top" alt="placeholder" />
-                        <p>This is a 2 Bedroom, 2 Bath, approximately 1082 Sq. Ft.</p>
+                        <p>{props.details}</p>
                         <EditBtn />
                         <InactiveBtn />
                     </CardBody>
-                    <CardFooter className='cardFooter'><strong>$1600 /mo</strong></CardFooter>
+                    <CardFooter className='cardFooter'><strong>{props.price}</strong></CardFooter>
                 </Card>
-            </Col>
+            </Col> */}
+            <Row>
 
-        );
-    }
-}
+                {props.listings.length ? (
+                    <div>
+                        {props.listings.map(listing => (
+                            <Card key={listing._id}>
+                                <CardHeader className='cardHeader'>{listing.propertyName}</CardHeader>
+                                <CardBody>
+                                    <img src="https://images.craigslist.org/00101_daosvbG18Yj_600x450.jpg" className="card-img-top" alt="placeholder" />
+                                    <p>{listing.details}</p>
+                                    <EditBtn />
+                                    <InactiveBtn />
+                                </CardBody>
+                                <CardFooter className='cardFooter'><strong>{listing.price}</strong></CardFooter>
+
+                            </Card>
+                        ))}
+                    </div>
+                ) : (
+                        <h3>No Results to Display</h3>
+                    )}
+            </Row>
+        </div>
+    );
+};
 
 export default index;

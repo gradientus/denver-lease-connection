@@ -37,7 +37,10 @@ app.use(passport.session());
 
 //authentication routes
 require("./routes/authRoutes")(app);
+
+
 // require('./routes/listingRoutes')(app);
+
 
 //********************************************
 
