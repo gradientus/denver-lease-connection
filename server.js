@@ -12,14 +12,12 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 //*********Google OAuth requirements********
-4;
+
 const cookieSession = require("cookie-session");
 const passport = require("passport");
 const keys = require("./config/keys");
 require("./models/User");
 require("./services/passport");
-
-
 
 mongoose.connect(keys.mongoURI);
 
@@ -39,10 +37,6 @@ app.use(passport.session());
 
 //authentication routes
 require("./routes/authRoutes")(app);
-
-
-
-
 
 //********************************************
 

@@ -14,3 +14,5 @@ const RenterLanding = () => {
 };
 
 export default RenterLanding;
+
+//TODO: I think I need state here to track which property was applied for.

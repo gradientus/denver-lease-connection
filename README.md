@@ -10,11 +10,15 @@ https://denver-lease-connection.herokuapp.com/
 
 Sub-leasor:
 
-1.
-2.
-3.
+1. Do this.
+2. Do that.
+3. Try again.
 
-Renter: 1. 2. 3.
+Renter:
+
+1. Do that.
+2. Do this.
+3. Do this again.
 
 ## Built With
 
@@ -25,6 +29,15 @@ Renter: 1. 2. 3.
 - JavaScript
 - Reactstrap
 - Google oAuth
+- Mongoose
+- Axios
+- Heroku
+- NPM
+- ChatKit
+- Passport
+- BrowserRouter
+- dotEnv
+- Cookie-Session
 
 ## Contributing
 
@@ -99,8 +112,8 @@ available at [http://contributor-covenant.org/version/1/4][version]
 
 ## Authors
 
-**Barbara Whiting** - [Github](https://github.com/)
-**Austin Terry** - [Github](https://github.com/)
+**Barbara Whiting** - [Github](https://github.com/whitingba)
+**Austin Terry** - [Github](https://github.com/caustinterry)
 **Phil Mauracher** - [Github](https://github.com/gradientus)
 
 ## License
