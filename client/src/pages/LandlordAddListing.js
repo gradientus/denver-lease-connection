@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ListingForm from '../components/ListingForm';
 import LandlordNav from '../components/LandlordNav';
 import API from "../util/APIListing";
+import { Redirect } from 'react-router-dom';
 
 
 
@@ -12,11 +13,13 @@ import API from "../util/APIListing";
 class LandlordAddListing extends Component {
 
     state = {
-        listings: [],
         propertyName: "",
         details: "",
-        price: ""
+        price: "",
+
     };
+
+
 
     //handle data typed into form to set to state
     handleInputChange = event => {
@@ -37,7 +40,7 @@ class LandlordAddListing extends Component {
                 price: this.state.price
             })
                 //TODO: pop-up modal confirming listing was added or go to a new page asking if they want to add another listing or finished which will redirect them to their listings)
-                .then(res => console.log('new listing added for: ' + this.state.propertyName))
+                .then(res => window.location.href = '/landlordList')
                 .catch(err => console.log(err))
         } else {
             alert("You must complete all fields before submitting")

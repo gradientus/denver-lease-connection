@@ -37,12 +37,6 @@ app.use(passport.session());
 
 //authentication routes
 require("./routes/authRoutes")(app);
-<<<<<<< Updated upstream
-=======
-// require('./routes/listingRoutes')(app);
-
-
->>>>>>> Stashed changes
 
 //********************************************
 

@@ -4,13 +4,13 @@ const index = () => {
   return (
     <div className="fixed-bottom">
       <footer className="footer text-light bg-dark">
-        <container className="container">
+        <div className="container">
           <div className="row d-flex align-items-center">
             <div className="col-md-4 col-lg-4 text-center "></div>
             <div className="col-md-4 col-lg-4 text-center">
               <sup>
                 {" "}
-                <i class="far fa-copyright fa-xs"></i>
+                <i className="far fa-copyright fa-xs"></i>
               </sup>
               Denver Lease Connection
             </div>
@@ -35,7 +35,7 @@ const index = () => {
               <i className="fab fa-github white-text mr-4"></i>
             </a>
           </div> */}
-        </container>
+        </div>
       </footer>
     </div>
   );

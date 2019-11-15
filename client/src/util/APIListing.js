@@ -6,7 +6,7 @@ export default {
         return axios.get("/api/listings");
     },
     //gunction to get listings by given id
-    getlisting: function (id) {
+    getListing: function (id) {
         return axios.get("/api/listings/" + id);
     },
     //function to delete a book with a given id
