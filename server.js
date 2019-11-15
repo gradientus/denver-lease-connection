@@ -21,9 +21,7 @@ db.once("open", () => console.log("Connected to Mongoose."));
 //*********Google OAuth requirements********
 const cookieSession = require("cookie-session");
 const passport = require("passport");
-if (process.env.NODE_ENV !== "production") {
-  const keys = require("./config/keys");
-}
+const keys = require("./config/keys");
 require("./models/User");
 require("./services/passport");
 // mongoose.connect(keys.mongoURI); //This is already accounted for above.
@@ -34,7 +32,7 @@ app.use(
     //cookie will last 45 days
     maxAge: 45 * 24 * 60 * 60 * 1000,
     //encrypt the id - the key can be found in the keys.js file
-    keys: [process.env.cookieKey] || [keys.cookieKey]
+    keys: [keys.cookieKey]
   })
 );
 
@@ -44,8 +42,6 @@ app.use(passport.session());
 
 //authentication routes
 require("./routes/authRoutes")(app);
-
-
 
 //Middleware
 app.use(express.urlencoded({ extended: true }));

@@ -1,9 +1,5 @@
 import axios from "axios";
-if (process.env.NODE.ENV !== "production") {
-  const keys = require("../config/keys");
-}
-const appId = process.env.APP_ID || keys.APP_ID;
-const appKey = process.env.APP_KEY || keys.APP_KEY;
+const keys = require("../config/keys");
 
 export default {
   getInmate: function() {
