@@ -85,7 +85,7 @@ const index = props => {
             <Row>
                 <Col></Col>
                 <Col>
-                    <Button color="secondary" size="lg" block onSubmit={props.handleFormSubmit}>
+                    <Button color="secondary" size="lg" block onClick={props.handleFormSubmit}>
                         Add Listing
                     </Button>
                 </Col>

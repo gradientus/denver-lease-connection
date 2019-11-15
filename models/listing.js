@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const listingSchema = new Schema({
     propertyName: { type: String, required: true },
     details: { type: String, required: true },
-    price: { type: Number, required: true },
+    price: { type: String, required: true },
     isActive: { type: Boolean, default: true },
     date: { type: Date, default: Date.now }
 });

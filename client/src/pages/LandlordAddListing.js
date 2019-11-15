@@ -33,7 +33,7 @@ class LandlordAddListing extends Component {
         if (this.state.propertyName && this.state.details && this.state.price) {
             API.saveListing({
                 propertyName: this.state.propertyName,
-                details: this.state.propertyName,
+                details: this.state.details,
                 price: this.state.price
             })
                 //TODO: pop-up modal confirming listing was added or go to a new page asking if they want to add another listing or finished which will redirect them to their listings)

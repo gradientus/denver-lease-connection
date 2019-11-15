@@ -4,7 +4,7 @@ module.exports = {
 
     //find all the listings
     findAll: function (req, res) {
-        db.Listing
+        db
             .find(req.query)
             .sort({ date: -1 })
             .then(dbModel => res.json(dbModel))
@@ -12,21 +12,23 @@ module.exports = {
     },
     //find a listing by it's id
     findById: function (req, res) {
-        db.Listing
+        db
             .findById(req.params.id)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     //create a new listing
     create: function (req, res) {
-        db.Listing
+        console.log(req.body);
+        db
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
+        console.log('hit create')
     },
     //edit/update a Listing
     update: function (req, res) {
-        db.Listing
+        db
             .findOneAndUpdate({ _id: req.params.id }, req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
