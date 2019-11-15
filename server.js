@@ -7,7 +7,7 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-
+const listings = require('./routes/listingRoutes');
 //Initialize mongoose
 const mongoose = require("mongoose");
 
@@ -37,6 +37,12 @@ app.use(passport.session());
 
 //authentication routes
 require("./routes/authRoutes")(app);
+<<<<<<< Updated upstream
+=======
+// require('./routes/listingRoutes')(app);
+
+
+>>>>>>> Stashed changes
 
 //********************************************
 
@@ -48,9 +54,10 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //Routes
+app.use('/api/listings', listings);
 // const routes = require("./routes");
 // app.use(routes);
-require("./routes/listingRoutes");
+//require("./routes/listingRoutes");
 
 mongoose.connect(
   process.env.DATABASE_URI || "mongodb://localhost/denverleaseconnection"
