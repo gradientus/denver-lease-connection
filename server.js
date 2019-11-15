@@ -1,13 +1,13 @@
 //Check if we are in production environment
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
+// if (process.env.NODE_ENV !== "production") {
+//   require("dotenv").config();
+// }
 
 //Initialize Express
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const listings = require('./routes/listingRoutes');
+const listings = require("./routes/listingRoutes");
 //Initialize mongoose
 const mongoose = require("mongoose");
 
@@ -38,6 +38,10 @@ app.use(passport.session());
 //authentication routes
 require("./routes/authRoutes")(app);
 
+
+// require('./routes/listingRoutes')(app);
+
+
 //********************************************
 
 //Middleware
@@ -48,7 +52,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //Routes
-app.use('/api/listings', listings);
+app.use("/api/listings", listings);
 // const routes = require("./routes");
 // app.use(routes);
 //require("./routes/listingRoutes");
