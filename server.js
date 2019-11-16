@@ -10,7 +10,7 @@ const listings = require("./routes/listingRoutes");
 //Initialize mongoose
 const mongoose = require("mongoose");
 mongoose.connect(
-  process.env.DATABASE_URI || "mongodb://localhost/denverleaseconnection"
+  process.env.mongoURI || "mongodb://localhost/denverleaseconnection"
 );
 const db = mongoose.connection;
 db.on("error", error => console.error(error));
