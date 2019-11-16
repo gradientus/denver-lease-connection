@@ -8,21 +8,9 @@ import { Row, Col, Card, CardHeader, CardBody, CardFooter } from 'reactstrap';
 
 const index = props => {
     return (
-        <div>
-            {/* <Col>
-                <Card>
-                    <CardHeader className='cardHeader'>{props.propertyName}</CardHeader>
-                    <CardBody>
-                        <img src="https://images.craigslist.org/00101_daosvbG18Yj_600x450.jpg" className="card-img-top" alt="placeholder" />
-                        <p>{props.details}</p>
-                        <EditBtn />
-                        <InactiveBtn />
-                    </CardBody>
-                    <CardFooter className='cardFooter'><strong>{props.price}</strong></CardFooter>
-                </Card>
-            </Col> */}
-            <Row>
+        <>
 
+            <Row>
                 {props.listings.length ? (
                     <div>
                         {props.listings.map(listing => (
@@ -43,7 +31,7 @@ const index = props => {
                         <h3>No Results to Display</h3>
                     )}
             </Row>
-        </div>
+        </>
     );
 };
 

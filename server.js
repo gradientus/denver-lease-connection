@@ -8,18 +8,23 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const listings = require("./routes/listingRoutes");
+
 //Initialize mongoose
 const mongoose = require("mongoose");
+mongoose.connect(
+  process.env.DATABASE_URI || "mongodb://localhost/denverleaseconnection"
+);
+const db = mongoose.connection;
+db.on("error", error => console.error(error));
+db.once("open", () => console.log("Connected to Mongoose."));
 
 //*********Google OAuth requirements********
-
 const cookieSession = require("cookie-session");
 const passport = require("passport");
 const keys = require("./config/keys");
 require("./models/User");
 require("./services/passport");
-
-mongoose.connect(keys.mongoURI);
+// mongoose.connect(keys.mongoURI); //This is already accounted for above.
 
 //middleware, using cookies to handle authentication
 app.use(
@@ -38,12 +43,6 @@ app.use(passport.session());
 //authentication routes
 require("./routes/authRoutes")(app);
 
-
-// require('./routes/listingRoutes')(app);
-
-
-//********************************************
-
 //Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -56,13 +55,6 @@ app.use("/api/listings", listings);
 // const routes = require("./routes");
 // app.use(routes);
 //require("./routes/listingRoutes");
-
-mongoose.connect(
-  process.env.DATABASE_URI || "mongodb://localhost/denverleaseconnection"
-);
-const db = mongoose.connection;
-db.on("error", error => console.error(error));
-db.once("open", () => console.log("Connected to Mongoose."));
 
 //Listener
 const PORT = process.env.PORT || 3210;
