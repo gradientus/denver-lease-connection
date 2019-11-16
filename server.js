@@ -1,7 +1,5 @@
-//Check if we are in production environment
-// if (process.env.NODE_ENV !== "production") {
-//   require("dotenv").config();
-// }
+require("dotenv").config();
+//console.log("Process ENV: ", process.env);
 
 //Initialize Express
 const express = require("express");
@@ -21,7 +19,7 @@ db.once("open", () => console.log("Connected to Mongoose."));
 //*********Google OAuth requirements********
 const cookieSession = require("cookie-session");
 const passport = require("passport");
-const keys = require("./config/keys");
+//const keys = require("./config/keys");
 require("./models/User");
 require("./services/passport");
 // mongoose.connect(keys.mongoURI); //This is already accounted for above.
@@ -32,7 +30,7 @@ app.use(
     //cookie will last 45 days
     maxAge: 45 * 24 * 60 * 60 * 1000,
     //encrypt the id - the key can be found in the keys.js file
-    keys: [keys.cookieKey]
+    keys: [process.env.cookieKey]
   })
 );
 

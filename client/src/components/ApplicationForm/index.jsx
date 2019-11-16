@@ -14,6 +14,7 @@ import {
 //TODO: Add the reactstrap stuff
 
 const ApplicationForm = () => {
+  //TODO: Put all the JS in here
   return (
     <div>
       <RenterNav />
