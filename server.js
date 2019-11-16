@@ -10,7 +10,7 @@ const listings = require("./routes/listingRoutes");
 //Initialize mongoose
 const mongoose = require("mongoose");
 mongoose.connect(
-  process.env.DATABASE_URI || "mongodb://localhost/denverleaseconnection"
+  process.env.mongoURI || "mongodb://localhost/denverleaseconnection"
 );
 const db = mongoose.connection;
 db.on("error", error => console.error(error));
@@ -47,6 +47,9 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+// app.get("*", (request, response) => {
+//   response.sendFile(path.join(__dirname, "client/build", "index.html"));
+// });
 
 //Routes
 app.use("/api/listings", listings);
