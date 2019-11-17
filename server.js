@@ -46,7 +46,7 @@ require("./routes/authRoutes")(app);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("${__dirname}/build"));
+  app.use(express.static("client/build"));
 }
 
 
@@ -58,10 +58,10 @@ app.get("*", (req, res) => {
 
   if (protected.includes(path)) {
     // Return the actual file
-    res.sendFile(`${__dirname}/build/${path}`);
+    res.sendFile(`client/build/${path}`);
   } else {
     // Otherwise, redirect to /build/index.html
-    res.sendFile(`${__dirname}/build/index.html`);
+    res.sendFile(`client}/build/index.html`);
   }
 });
 
