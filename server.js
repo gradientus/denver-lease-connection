@@ -58,10 +58,10 @@ app.get("*", (req, res) => {
 
   if (protected.includes(path)) {
     // Return the actual file
-    res.sendFile(`client/build/${path}`);
+    res.sendFile(`${__dirname}/client/build/${path}`);
   } else {
     // Otherwise, redirect to /build/index.html
-    res.sendFile(`client/build/index.html`);
+    res.sendFile(`${__dirname}/client/build/index.html`);
   }
 });
 
