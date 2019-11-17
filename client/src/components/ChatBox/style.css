@@ -1,5 +1,5 @@
 .Chat {
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -86,7 +86,7 @@
 }
 
 .Chat__messages__message__arrow:after {
-  content: '';
+  content: "";
   position: absolute;
   border: 0 solid transparent;
   border-top: 9px solid #ffffff;
@@ -98,7 +98,7 @@
 
 .Chat__messages__message__arrow.alt:after {
   transform: rotate(45deg) scaleY(-1);
-  border-top: 9px solid #542182;
+  border-top: 9px solid #0084ff;
 }
 
 .Chat__messages__message--other {
@@ -106,7 +106,7 @@
 }
 
 .Chat__messages__message--self {
-  background: #542182;
+  background: #0084ff;
   color: #ffffff;
 }
 
