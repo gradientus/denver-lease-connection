@@ -9,6 +9,7 @@ const listings = require("./routes/listingRoutes");
 const path = require('path');
 
 //Initialize mongoose
+//added mlabs URI to .env
 const mongoose = require("mongoose");
 mongoose.connect(
   process.env.mongoURI || "mongodb://localhost/denverleaseconnection"
