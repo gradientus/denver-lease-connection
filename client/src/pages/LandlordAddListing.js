@@ -39,7 +39,7 @@ class LandlordAddListing extends Component {
                 details: this.state.details,
                 price: this.state.price
             })
-                //TODO: pop-up modal confirming listing was added or go to a new page asking if they want to add another listing or finished which will redirect them to their listings)
+
                 .then(res => window.location.href = '/landlordList')
                 .catch(err => console.log(err))
         } else {

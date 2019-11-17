@@ -7,7 +7,8 @@ const listingSchema = new Schema({
     details: { type: String, required: true },
     price: { type: String, required: true },
     isActive: { type: Boolean, default: true },
-    date: { type: Date, default: Date.now }
+    date: { type: Date, default: Date.now },
+    user: { type: Schema.Types.ObjectId, ref: "User" }
 });
 const Listing = mongoose.model("Listing", listingSchema);
 module.exports = Listing;
