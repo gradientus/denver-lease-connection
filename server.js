@@ -41,6 +41,8 @@ app.use(passport.session());
 
 //authentication routes
 require("./routes/authRoutes")(app);
+//routes for listings
+app.use("/api/listings", listings);
 
 //Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -66,7 +68,7 @@ app.get("*", (req, res) => {
 });
 
 //Routes
-app.use("/api/listings", listings);
+
 // const routes = require("./routes");
 // app.use(routes);
 //require("./routes/listingRoutes");
