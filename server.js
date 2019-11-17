@@ -49,6 +49,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+let protected = ['favicon.ico']
+
 app.get("*", (req, res) => {
 
   let path = req.params['0'].substring(1)
