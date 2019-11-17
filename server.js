@@ -47,9 +47,13 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// app.get("*", (request, response) => {
-//   response.sendFile(path.join(__dirname, "client/build", "index.html"));
-// });
+
+app.get('/*', (req, res) => {
+  let url = path.join(__dirname, '../client/build', 'index.html');
+  if (!url.startsWith('/app/')) // we're on local windows
+    url = url.substring(1);
+  res.sendFile(url);
+});
 
 //Routes
 app.use("/api/listings", listings);
