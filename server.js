@@ -12,7 +12,7 @@ const path = require('path');
 //added mlabs URI to .env
 const mongoose = require("mongoose");
 mongoose.connect(
-  process.env.mongoURI || "mongodb://localhost/denverleaseconnection"
+  process.env.MONGODB_URI || "mongodb://localhost/denverleaseconnection"
 );
 const db = mongoose.connection;
 db.on("error", error => console.error(error));
