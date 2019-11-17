@@ -4,11 +4,15 @@ import EditBtn from '../EditButton';
 import InactiveBtn from '../InactiveButton';
 import { Row, Col, Card, CardHeader, CardBody, CardFooter } from 'reactstrap';
 
-
+//const numbers = [1, 10, 100, 1000, 10000];
 
 const index = props => {
     return (
         <>
+
+            {/* {props.listings.map(listing => {
+                return <Card key={listing._id}>{listing.propertyName}</Card>
+            })} */}
 
             {props.listings.length ? (
                 <div className='cardDiv'>
