@@ -23,8 +23,11 @@ const index = props => {
                 <Col></Col>
                 <Col>
                     <InputGroup>
-                        <InputGroupAddon addonType='prepend'><Button>Upload Photo</Button></InputGroupAddon>
-                        <Input />
+                        <InputGroupAddon
+                            addonType='prepend'><Button>Upload Photo</Button></InputGroupAddon>
+                        <Input
+                            placeholder="For future development"
+                        />
                     </InputGroup>
                 </Col>
                 <Col></Col>
