@@ -6,6 +6,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const listings = require("./routes/listingRoutes");
+const path = require('path');
 
 //Initialize mongoose
 const mongoose = require("mongoose");
