@@ -6,6 +6,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const listings = require("./routes/listingRoutes");
+const path = require('path');
 
 //Initialize mongoose
 const mongoose = require("mongoose");
@@ -47,9 +48,22 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// app.get("*", (request, response) => {
-//   response.sendFile(path.join(__dirname, "client/build", "index.html"));
-// });
+
+
+let protected = ['favicon.ico']
+
+app.get("*", (req, res) => {
+
+  let path = req.params['0'].substring(1)
+
+  if (protected.includes(path)) {
+    // Return the actual file
+    res.sendFile(`${__dirname}/client/build/${path}`);
+  } else {
+    // Otherwise, redirect to /build/index.html
+    res.sendFile(`${__dirname}/client/build/index.html`);
+  }
+});
 
 //Routes
 app.use("/api/listings", listings);
@@ -60,3 +74,6 @@ app.use("/api/listings", listings);
 //Listener
 const PORT = process.env.PORT || 3210;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
+
+
+//random comment here

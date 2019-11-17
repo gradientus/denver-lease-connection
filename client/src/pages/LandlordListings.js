@@ -4,6 +4,7 @@ import Greeting from '../components/GreetingContainer';
 import ListingContainer from '../components/ListingContainer';
 import Footer from '../components/Footer';
 import API from '../util/APIListing';
+import { Col, Row } from 'reactstrap';
 
 
 class LandlordListings extends Component {
@@ -22,7 +23,9 @@ class LandlordListings extends Component {
         API.getListings()
             .then(res =>
                 this.setState({ listings: res.data, propertyName: "", details: "", price: "" })
+
             )
+
             .catch(err => console.log(err));
     };
 
@@ -33,13 +36,16 @@ class LandlordListings extends Component {
             <div>
                 <LandNavbar />
                 <Greeting />
-                <ListingContainer
-                    listings={this.state.listings}
-                    propertyName={this.state.propertyName}
-                    details={this.state.details}
-                    price={this.state.price}
-                />
-
+                <Row>
+                    <Col sm="4">
+                        <ListingContainer
+                            listings={this.state.listings}
+                            propertyName={this.state.propertyName}
+                            details={this.state.details}
+                            price={this.state.price}
+                        />
+                    </Col>
+                </Row>
                 <Footer />
             </div >
         );
