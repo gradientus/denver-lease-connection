@@ -4,6 +4,7 @@ import Greeting from '../components/GreetingContainer';
 import ListingContainer from '../components/ListingContainer';
 import Footer from '../components/Footer';
 import API from '../util/APIListing';
+import APIUsers from '../util/APIUser'
 import { Col, Row, Card } from 'reactstrap';
 
 
@@ -19,8 +20,8 @@ class LandlordListings extends Component {
         user: {}
     };
 
-    loadUser = () => {
-        API.getUser()
+    loadCurrentUser = () => {
+        APIUsers.getCurrentUser()
             .then(res =>
                 this.setState({ user: res.data })
 
@@ -29,7 +30,7 @@ class LandlordListings extends Component {
     }
 
     componentDidMount() {
-        this.loadUser();
+        this.loadCurrentUser();
         this.loadListings();
     }
 

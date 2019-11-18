@@ -26,6 +26,7 @@ const index = (props) => {
                 />
                 <p>{listing.details}</p>
                 <Button>Apply</Button>
+                <Button>Chat with {props.user.firstName}</Button>
               </CardBody>
               <CardFooter className="cardFooter">
                 <strong>{listing.price}</strong>

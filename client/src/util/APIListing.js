@@ -19,10 +19,15 @@ export default {
         return axios.post("/api/listings", listingData);
 
     },
+
+    //TODO: move these to their own APIUser file
     //function to get current user
-    getUser: function () {
+    getCurrentUser: function () {
         //console.log("got to here")
         return axios.get("/api/current_user");
-
+    },
+    getUser: function () {
+        return axios.get("/api/user");
     }
+
 };
