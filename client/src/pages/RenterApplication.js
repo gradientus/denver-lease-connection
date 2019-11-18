@@ -4,6 +4,12 @@ import Footer from "../components/Footer";
 import { Col, Row } from "reactstrap";
 
 const RenterApplication = () => {
+  var firstName = "Phil";
+  var lastName = "Smith";
+  var state = "Georgia";
+  var ip = process.env.ip;
+  var timeStamp = Math.round(new Date().getTime() / 1000);
+
   return (
     <div>
       <ApplicationForm />
