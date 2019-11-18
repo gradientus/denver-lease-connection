@@ -4,10 +4,11 @@
   "private": true,
   "proxy": "http://localhost:3210/",
   "dependencies": {
-    "concurrently": "^5.0.0",
+    "@pusher/chatkit-client-react": "^0.1.2",
     "http-proxy-middleware": "^0.20.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-moment": "^0.9.6",
     "react-scripts": "3.2.0",
     "typescript": "^3.7.2"
   },
