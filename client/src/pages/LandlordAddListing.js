@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ListingForm from '../components/ListingForm';
 import LandlordNav from '../components/LandlordNav';
 import API from "../util/APIListing";
-import { Redirect } from 'react-router-dom';
+
 
 
 
@@ -41,6 +41,7 @@ class LandlordAddListing extends Component {
             })
 
                 .then(res => window.location.href = '/landlordList')
+
                 .catch(err => console.log(err))
         } else {
             alert("You must complete all fields before submitting")

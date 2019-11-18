@@ -7,16 +7,29 @@ import API from '../util/APIListing';
 import { Col, Row, Card } from 'reactstrap';
 
 
+
+
 class LandlordListings extends Component {
     state = {
         listings: [],
         propertyName: "",
         details: "",
         price: "",
-        isActive: ""
+        isActive: "",
+        user: {}
     };
 
+    loadUser = () => {
+        API.getUser()
+            .then(res =>
+                this.setState({ user: res.data })
+
+            )
+            .catch(err => console.log(err));
+    }
+
     componentDidMount() {
+        this.loadUser();
         this.loadListings();
     }
 
@@ -54,7 +67,9 @@ class LandlordListings extends Component {
         return (
             <>
                 <LandNavbar />
-                <Greeting />
+                <Greeting
+                    user={this.state.user}
+                />
                 <ListingContainer
                     listings={this.state.listings}
                     propertyName={this.state.propertyName}
