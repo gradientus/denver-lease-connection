@@ -1,18 +1,47 @@
 import React, { Component } from "react";
 import RenterNav from "../components/RenterNav";
-import RenterProperties from "../components/RenterProperties";
+import Greeting from "../components/GreetingContainer";
+import ListingContainer from "../components/ListingContainer";
 import Footer from "../components/Footer";
+import API from "../util/APIListing";
+import { Col, Row, Card } from "reactstrap";
 
-const RenterLanding = () => {
-  return (
-    <div>
-      <RenterNav />
-      <RenterProperties />
-      <Footer />
-    </div>
-  );
-};
+class RenterLanding extends Component {
+  state = {
+    listings: [],
+    propertyName: "",
+    details: "",
+    price: ""
+  };
+  componentDidMount() {
+    this.loadListings();
+  }
+  loadListings = () => {
+    API.getListings()
+      .then(res =>
+        this.setState({
+          listings: res.data,
+          propertyName: "",
+          details: "",
+          price: ""
+        })
+      )
+      .catch(err => console.error(err));
+  };
+  render() {
+    return (
+      <div>
+        <RenterNav />
+        <ListingContainer
+          listings={this.state.listings}
+          propertyName={this.state.propertyName}
+          details={this.state.details}
+          price={this.state.price}
+        />
+        <Footer />
+      </div>
+    );
+  }
+}
 
 export default RenterLanding;
-
-//TODO: I think I need state here to track which property was applied for.
