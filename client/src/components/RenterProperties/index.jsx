@@ -9,29 +9,38 @@ import {
   Button
 } from "reactstrap";
 
-const RenterProperties = () => {
+const index = (props) => {
   return (
     <Col>
-      <Card>
-        <CardHeader className="cardHeader">Property Name</CardHeader>
-        <CardBody>
-          <img
-            src="https://images.craigslist.org/00101_daosvbG18Yj_600x450.jpg"
-            className="card-img-top"
-            alt="property"
-          />
-          <p>This is a 2 Bedroom, 2 Bath, approximately 1082 Sq. Ft.</p>
-        </CardBody>
-        <CardFooter className="cardFooter">
-          <strong>$1600 /mo</strong>
-          <Button>Apply</Button>
-        </CardFooter>
-      </Card>
+      {props.listings.length ? (
+        <div>
+          {props.listings.map(listing => (
+            <Card key={listing._id}>
+              <CardHeader className="cardHeader">{listing.propertyName}</CardHeader>
+              <CardBody>
+                <img
+                  src="https://images.craigslist.org/00101_daosvbG18Yj_600x450.jpg"
+                  className="card-img-top"
+                  alt="property"
+                />
+                <p>{listing.details}</p>
+                <Button>Apply</Button>
+              </CardBody>
+              <CardFooter className="cardFooter">
+                <strong>{listing.price}</strong>
+
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      ) : (
+          <h3>No results to Display</h3>
+        )}
     </Col>
   );
 };
 
-export default RenterProperties;
+export default index;
 
 //TODO: Need to track the onclick here, this puts the user into applicants
 //TODO: Need to pull the information from the MongoDB

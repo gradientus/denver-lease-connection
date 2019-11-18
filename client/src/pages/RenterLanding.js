@@ -3,7 +3,7 @@ import RenterNav from "../components/RenterNav";
 import Greeting from "../components/GreetingContainer";
 import ListingContainer from "../components/ListingContainer";
 import Footer from "../components/Footer";
-import API from "../util/APIListing";
+import API from '../util/APIListing';
 import { Col, Row, Card } from "reactstrap";
 
 class RenterLanding extends Component {
@@ -13,29 +13,32 @@ class RenterLanding extends Component {
     details: "",
     price: ""
   };
+
+
   componentDidMount() {
     this.loadListings();
   }
+
   loadListings = () => {
     API.getListings()
       .then(res =>
-        this.setState({
-          listings: res.data,
-          propertyName: "",
-          details: "",
-          price: ""
-        })
+        this.setState({ listings: res.data, propertyName: "", details: "", price: "" })
+
       )
-      .catch(err => console.error(err));
+
+      .catch(err => console.log(err));
   };
+
+
+
   render() {
     return (
       <div>
         <RenterNav />
-        <ListingContainer
+        <RenterProperties
           listings={this.state.listings}
           propertyName={this.state.propertyName}
-          details={this.state.details}
+          detail={this.state.details}
           price={this.state.price}
         />
         <Footer />
@@ -45,3 +48,4 @@ class RenterLanding extends Component {
 }
 
 export default RenterLanding;
+

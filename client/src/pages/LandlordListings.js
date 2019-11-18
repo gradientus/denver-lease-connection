@@ -33,22 +33,6 @@ class LandlordListings extends Component {
 
     render() {
         return (
-            // <div>
-            //     <LandNavbar />
-            //     <Greeting />
-            //     <Row>
-            //         <Col sm="4">
-            //             <ListingContainer
-            //                 listings={this.state.listings}
-            //                 propertyName={this.state.propertyName}
-            //                 details={this.state.details}
-            //                 price={this.state.price}
-            //             />
-            //         </Col>
-            //     </Row>
-            //     <Footer />
-            // </div >
-
             <>
                 <LandNavbar />
                 <Greeting />
