@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import RenterNav from "../components/RenterNav";
-import RenterProperties from "../components/RenterProperties";
+import Greeting from "../components/GreetingContainer";
+import ListingContainer from "../components/ListingContainer";
 import Footer from "../components/Footer";
 import API from '../util/APIListing';
-
-
+import { Col, Row, Card } from "reactstrap";
 
 class RenterLanding extends Component {
   state = {
@@ -13,6 +13,7 @@ class RenterLanding extends Component {
     details: "",
     price: ""
   };
+
 
   componentDidMount() {
     this.loadListings();
@@ -27,6 +28,7 @@ class RenterLanding extends Component {
 
       .catch(err => console.log(err));
   };
+
 
 
   render() {
@@ -47,6 +49,3 @@ class RenterLanding extends Component {
 
 export default RenterLanding;
 
-
-
-//TODO: I think I need state here to track which property was applied for.
