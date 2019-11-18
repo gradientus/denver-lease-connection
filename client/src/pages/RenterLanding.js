@@ -5,6 +5,7 @@ import RenterProperties from "../components/RenterProperties";
 import Footer from "../components/Footer";
 import API from "../util/APIListing";
 import APIUsers from '../util/APIUser'
+
 import { Col, Row, Card } from "reactstrap";
 
 class RenterLanding extends Component {
@@ -16,10 +17,13 @@ class RenterLanding extends Component {
     isActive: true,
     user: {}
   };
+
+
   componentDidMount() {
     this.loadCurrentUser();
     this.loadListings();
   }
+
 
   loadCurrentUser = () => {
     APIUsers.getCurrentUser()
@@ -36,8 +40,12 @@ class RenterLanding extends Component {
         this.setState({ listings: res.data, propertyName: "", details: "", price: "", isActive: true, user: "" })
 
       )
-      .catch(err => console.error(err));
+
+      .catch(err => console.log(err));
   };
+
+
+
   render() {
     return (
       <div>
@@ -45,7 +53,7 @@ class RenterLanding extends Component {
         <RenterProperties
           listings={this.state.listings}
           propertyName={this.state.propertyName}
-          details={this.state.details}
+          detail={this.state.details}
           price={this.state.price}
           user={this.state.user}
         />
@@ -56,3 +64,4 @@ class RenterLanding extends Component {
 }
 
 export default RenterLanding;
+
