@@ -32,13 +32,11 @@ const index = (props) => {
 
               </CardFooter>
             </Card>
-          ))
-          }
+          ))}
         </div>
       ) : (
           <h3>No results to Display</h3>
-        )
-      }
+        )}
     </Col>
   );
 };
