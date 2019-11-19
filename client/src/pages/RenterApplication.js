@@ -19,8 +19,9 @@ class RenterApplication extends Component {
     info: ""
   };
 
-  //QUESTION: Do I need to make a call to the userAPI? To match it with the application?  Is that needed?
-  //TODO: I do need to load the API to post the form information to the collection
+  //QUESTION: Do I add the API call here or in the application component upon click?
+
+  //TODO: Add the props this.state.___
 
   handleInputChange = event => {
     const { name, value } = event.target;

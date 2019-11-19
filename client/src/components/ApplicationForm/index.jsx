@@ -24,6 +24,8 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="firstName">First Name</Label>
           <Input
+            value={props.firstName}
+            onChange={props.handleInputChange}
             type="text"
             name="firstName"
             id="firstNameId"
@@ -33,6 +35,8 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="lastName">Last Name</Label>
           <Input
+            value={props.lastName}
+            onChange={props.handleInputChange}
             type="text"
             name="lastName"
             id="lastNameId"
@@ -42,6 +46,8 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="address">Street Address</Label>
           <Input
+            value={props.address}
+            onChange={props.handleInputChange}
             type="text"
             name="address"
             id="addressId"
@@ -50,11 +56,24 @@ const ApplicationForm = () => {
         </FormGroup>
         <FormGroup>
           <Label for="city">City</Label>
-          <Input type="text" name="city" id="cityId" placeholder="Edgewater" />
+          <Input
+            value={props.city}
+            onChange={props.handleInputChange}
+            type="text"
+            name="city"
+            id="cityId"
+            placeholder="Edgewater"
+          />
         </FormGroup>
         <FormGroup>
           <Label for="state">State</Label>
-          <Input type="select" name="state" id="stateId">
+          <Input
+            value={props.state}
+            onChange={props.handleInputChange}
+            type="select"
+            name="state"
+            id="stateId"
+          >
             <option>Alabama</option>
             <option>Alaska</option>
             <option>Arizona</option>
@@ -111,11 +130,20 @@ const ApplicationForm = () => {
         </FormGroup>
         <FormGroup>
           <Label for="zip">ZIP</Label>
-          <Input type="text" name="zip" id="zipId" placeholder="80202" />
+          <Input
+            value={props.zip}
+            onChange={props.handleInputChange}
+            type="text"
+            name="zip"
+            id="zipId"
+            placeholder="80202"
+          />
         </FormGroup>
         <FormGroup>
           <Label for="phone">Phone</Label>
           <Input
+            value={props.phone}
+            onChange={props.handleInputChange}
             type="text"
             name="phone"
             id="phoneId"
@@ -125,6 +153,8 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="email">Email</Label>
           <Input
+            value={props.email}
+            onChange={props.handleInputChange}
             type="text"
             name="email"
             id="emailId"
@@ -133,7 +163,13 @@ const ApplicationForm = () => {
         </FormGroup>
         <FormGroup>
           <Label for="employment">Employment Satus</Label>
-          <Input type="select" name="employment" id="employmentId">
+          <Input
+            value={props.employment}
+            onChange={props.handleInputChange}
+            type="select"
+            name="employment"
+            id="employmentId"
+          >
             <option>full-time</option>
             <option>part-time</option>
             <option>student</option>
@@ -144,6 +180,8 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="income">Income</Label>
           <Input
+            value={props.income}
+            onChange={props.handleInputChange}
             type="number"
             name="income"
             id="incomeId"
@@ -153,6 +191,8 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="info">Additional Information</Label>
           <Input
+            value={props.info}
+            onChange={props.handleInputChange}
             type="textarea"
             name="info"
             id="additonalInfoId"
