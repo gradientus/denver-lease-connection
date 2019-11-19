@@ -12,7 +12,8 @@ class LandlordListings extends Component {
         listings: [],
         propertyName: "",
         details: "",
-        price: ""
+        price: "",
+        isActive: ""
     };
 
     componentDidMount() {
@@ -22,12 +23,30 @@ class LandlordListings extends Component {
     loadListings = () => {
         API.getListings()
             .then(res =>
-                this.setState({ listings: res.data, propertyName: "", details: "", price: "" })
+                this.setState({ listings: res.data, propertyName: "", details: "", price: "", isActive: "" })
 
             )
 
             .catch(err => console.log(err));
     };
+
+
+    handleEdit = (e) => {
+        e.preventDefault();
+
+        //grab the item clicked by the item id and go to a new screen to edit the data
+        console.log('Edit button was clicked')
+    }
+
+    handleInactivate = (e) => {
+        e.preventDefault();
+        //toggle active / inactive
+        {
+            this.isActive ?
+                this.setState({ isActive: false }) : this.setState({ isActive: true })
+        }
+        console.log('button to inactivate was clicked')
+    }
 
 
 
@@ -41,6 +60,9 @@ class LandlordListings extends Component {
                     propertyName={this.state.propertyName}
                     details={this.state.details}
                     price={this.state.price}
+                    isActive={this.state.isActive}
+                    handleEdit={this.handleEdit}
+                    handleInactivate={this.handleInactivate}
                 />
                 <Footer />
             </>

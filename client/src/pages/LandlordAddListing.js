@@ -15,7 +15,7 @@ class LandlordAddListing extends Component {
     state = {
         propertyName: "",
         details: "",
-        price: "",
+        price: ""
 
     };
 

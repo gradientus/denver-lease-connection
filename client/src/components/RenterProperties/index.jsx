@@ -12,6 +12,7 @@ import {
 const index = (props) => {
   return (
     <Col>
+      {/* TODO: need to add a conditional to test if the listing isActive = true then only return those listings */}
       {props.listings.length ? (
         <div>
           {props.listings.map(listing => (

@@ -4,7 +4,6 @@ import EditBtn from '../EditButton';
 import InactiveBtn from '../InactiveButton';
 import { Card, CardHeader, CardBody, CardFooter } from 'reactstrap';
 
-//const numbers = [1, 10, 100, 1000, 10000];
 
 const index = props => {
     return (
@@ -19,9 +18,11 @@ const index = props => {
                                 <img src="https://images.craigslist.org/00101_daosvbG18Yj_600x450.jpg" className="card-img-top" alt="placeholder" />
                                 <p>{listing.details}</p>
                                 <EditBtn>
-                                    {props.children}
+                                    {props.handleEdit}
                                 </EditBtn>
-                                <InactiveBtn />
+                                <InactiveBtn>
+                                    {props.handleInactivate}
+                                </InactiveBtn>
                             </CardBody>
                             <CardFooter className='cardFooter'><strong>{listing.price}</strong></CardFooter>
 
