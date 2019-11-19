@@ -39,6 +39,7 @@ class RenterLanding extends Component {
       .then(res =>
         this.setState({ listings: res.data, propertyName: "", details: "", price: "", isActive: true, user: "" })
 
+
       )
 
       .catch(err => console.log(err));

@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import './style.css';
 import EditBtn from '../EditButton';
 import InactiveBtn from '../InactiveButton';
-import { Card, CardHeader, CardBody, CardFooter, Button } from 'reactstrap';
+import { Card, CardHeader, CardBody, CardFooter } from 'reactstrap';
+
 
 
 //const numbers = [1, 10, 100, 1000, 10000];
+
 
 const index = props => {
     return (
