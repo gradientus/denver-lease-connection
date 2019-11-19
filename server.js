@@ -8,6 +8,9 @@ const bodyParser = require("body-parser");
 const listings = require("./routes/listingRoutes");
 const path = require('path');
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 //Initialize mongoose
 //added mlabs URI to .env
 const mongoose = require("mongoose");
@@ -46,6 +49,7 @@ require("./routes/authRoutes")(app);
 app.use("/api/listings", listings);
 
 //Middleware
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 if (process.env.NODE_ENV === "production") {

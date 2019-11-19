@@ -19,12 +19,12 @@ module.exports = {
     },
     //create a new listing
     create: function (req, res) {
-        console.log(req.body);
+        //console.log("Create: " + req.body);
         db
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
-        console.log('hit create')
+        // console.log('hit create: ' + JSON.stringify(req.body))
     },
     //edit/update a Listing
     update: function (req, res) {

@@ -5,6 +5,10 @@ import InactiveBtn from '../InactiveButton';
 import { Card, CardHeader, CardBody, CardFooter } from 'reactstrap';
 
 
+
+//const numbers = [1, 10, 100, 1000, 10000];
+
+
 const index = props => {
     return (
         <>

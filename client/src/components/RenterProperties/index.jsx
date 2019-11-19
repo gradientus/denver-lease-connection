@@ -12,7 +12,7 @@ import {
 const index = (props) => {
   return (
     <Col>
-      {/* TODO: need to add a conditional to test if the listing isActive = true then only return those listings */}
+
       {props.listings.length ? (
         <div>
           {props.listings.map(listing => (
@@ -26,6 +26,7 @@ const index = (props) => {
                 />
                 <p>{listing.details}</p>
                 <Button>Apply</Button>
+                <Button>Chat with {props.user.firstName}</Button>
               </CardBody>
               <CardFooter className="cardFooter">
                 <strong>{listing.price}</strong>

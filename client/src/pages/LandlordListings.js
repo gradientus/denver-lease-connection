@@ -4,7 +4,10 @@ import Greeting from '../components/GreetingContainer';
 import ListingContainer from '../components/ListingContainer';
 import Footer from '../components/Footer';
 import API from '../util/APIListing';
+import APIUsers from '../util/APIUser'
 import { Col, Row, Card } from 'reactstrap';
+
+
 
 
 class LandlordListings extends Component {
@@ -13,10 +16,21 @@ class LandlordListings extends Component {
         propertyName: "",
         details: "",
         price: "",
-        isActive: ""
+        isActive: "",
+        user: {}
     };
 
+    loadCurrentUser = () => {
+        APIUsers.getCurrentUser()
+            .then(res =>
+                this.setState({ user: res.data })
+
+            )
+            .catch(err => console.log(err));
+    }
+
     componentDidMount() {
+        this.loadCurrentUser();
         this.loadListings();
     }
 
@@ -54,7 +68,9 @@ class LandlordListings extends Component {
         return (
             <>
                 <LandNavbar />
-                <Greeting />
+                <Greeting
+                    user={this.state.user}
+                />
                 <ListingContainer
                     listings={this.state.listings}
                     propertyName={this.state.propertyName}
