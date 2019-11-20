@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 //added mlabs URI to .env
 const mongoose = require("mongoose");
 mongoose.connect(
-  process.env.DATABASE_URI || "mongodb://localhost/denverleaseconnection"
+  process.env.oldmongoURI || "mongodb://localhost/denverleaseconnection"
 );
 const db = mongoose.connection;
 db.on("error", error => console.error(error));
@@ -47,6 +47,7 @@ app.use(passport.session());
 require("./routes/authRoutes")(app);
 //routes for listings
 app.use("/api/listings", listings);
+app.use("/api/listingsByUser", listings);
 
 //Middleware
 
