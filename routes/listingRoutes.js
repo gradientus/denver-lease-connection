@@ -10,6 +10,7 @@ router.route("/")
 router
     .route("/:id")
     .get(listingController.findById)
+    .get(listingController.findByUserId)
     .put(listingController.update)
 //.delete(listingController.remove);
 

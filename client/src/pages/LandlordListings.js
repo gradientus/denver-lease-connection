@@ -17,13 +17,13 @@ class LandlordListings extends Component {
         details: "",
         price: "",
         isActive: "",
-        user: {}
+        currentUser: {}
     };
 
     loadCurrentUser = () => {
         APIUsers.getCurrentUser()
             .then(res =>
-                this.setState({ user: res.data })
+                this.setState({ currentUser: res.data })
 
             )
             .catch(err => console.log(err));
@@ -69,7 +69,7 @@ class LandlordListings extends Component {
             <>
                 <LandNavbar />
                 <Greeting
-                    user={this.state.user}
+                    currentUser={this.state.currentUser}
                 />
                 <ListingContainer
                     listings={this.state.listings}

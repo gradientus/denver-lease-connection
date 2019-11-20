@@ -19,3 +19,7 @@ width: 350px;
     .cardDiv {
       display: inline-flex;
          }
+
+ .editBtn {
+   color: white;
+ }
