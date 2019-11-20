@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ChatkitProvider, TokenProvider } from "@pusher/chatkit-client-react";
 import axios from "axios";
+import APIUsers from "../../util/APIUser";
 
 import "./style.css";
 import ChatBox from "../ChatBox";
@@ -16,31 +17,24 @@ const tokenProvider = new TokenProvider({
 
 // const results = axios.get("/api/current_user");
 // console.log(results);
-const userId = "116916979726097879247";
-const otherUserId = "113647198101532205328";
+let userId = "108735557576994882532";
+let otherUserId = "116916979726097879247";
 // Barbara 113647198101532205328
 // Phil 116916979726097879247
 // Austin 108735557576994882532
 class ChatApp extends Component {
   state = {
     userId: "",
-    otherUserId: ""
+    otherUserId: {}
   };
 
-  // async componentDidMount() {
-  //   const results = await axios.get("/api/current_user");
-  //   const user = results.data.googleId;
-  //   const otherUserId = "116916979726097879247";
+  async componentDidMount() {
+    const results = await axios.get("/api/current_user");
+    const userId = results.data.googleId;
+    const otherUserId = "116916979726097879247";
 
-  //   console.log(user);
-  //   this.setState({ userId: user });
-  // }
-
-  componentDidMount() {
-    axios
-      .get("/api/current_user")
-      .then(res => this.setState({ userId: res.data.googleId }))
-      .catch(err => console.log(err));
+    console.log(userId);
+    this.setState({ userId: userId });
   }
 
   render() {

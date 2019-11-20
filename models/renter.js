@@ -13,8 +13,12 @@ const renterSchema = new Schema({
   income: { type: Number, required: true },
   employment: { type: String, required: true },
   info: { type: String, required: true },
-  criminal: { type: Boolean, required: true },
-  date: { type: Date, default: Date.now }
+  date: { type: Date, default: Date.now },
+  dob: { type: String, required: false },
+  currentStatus: { type: String, required: false },
+  bookingDate: { type: String, required: flase },
+  releaseDate: { type: String, required: false },
+  bcType: { type: String, required: false }
 });
 
 const Renter = mongoose.model("Renter", renterSchema);
