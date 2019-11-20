@@ -13,5 +13,10 @@ export default {
   //this is to get the applications saved to the renters collections
   getApplications: function() {
     return axios.get("/api/renter");
+  },
+
+  //this is to post the applications save to the renter collections
+  postApplications: function(applicationData) {
+    return axios.post("/api/renter", applicationData);
   }
 };
