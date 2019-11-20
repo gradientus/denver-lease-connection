@@ -1,17 +1,7 @@
 import React from "react";
 import RenterNav from "../RenterNav";
-import API from "../../util/API";
-import {
-  Button,
-  Jumbotron,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormText,
-  Col,
-  Row
-} from "reactstrap";
+//import API from "../../util/API";
+import { Button, Jumbotron, Form, FormGroup, Label, Input } from "reactstrap";
 
 const ApplicationForm = props => {
   return (
@@ -23,9 +13,10 @@ const ApplicationForm = props => {
         </Jumbotron>
         <Form>
           <FormGroup>
-            <Label for="firstName">First Name</Label>
+            <Label for="firstName">First Name*</Label>
             <Input
               onChange={props.handleInputChange}
+              value={props.state.firstName}
               type="text"
               name="firstName"
               id="firstNameId"
@@ -33,9 +24,10 @@ const ApplicationForm = props => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="lastName">Last Name</Label>
+            <Label for="lastName">Last Name*</Label>
             <Input
               onChange={props.handleInputChange}
+              value={props.state.lastName}
               type="text"
               name="lastName"
               id="lastNameId"
@@ -43,9 +35,10 @@ const ApplicationForm = props => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="address">Street Address</Label>
+            <Label for="address">Street Address*</Label>
             <Input
               onChange={props.handleInputChange}
+              value={props.state.address}
               type="text"
               name="address"
               id="addressId"
@@ -53,9 +46,10 @@ const ApplicationForm = props => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="city">City</Label>
+            <Label for="city">City*</Label>
             <Input
               onChange={props.handleInputChange}
+              value={props.state.city}
               type="text"
               name="city"
               id="cityId"
@@ -63,9 +57,10 @@ const ApplicationForm = props => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="state">State</Label>
+            <Label for="state">State*</Label>
             <Input
               onChange={props.handleInputChange}
+              value={props.state.state}
               type="select"
               name="state"
               id="stateId"
@@ -125,9 +120,10 @@ const ApplicationForm = props => {
             </Input>
           </FormGroup>
           <FormGroup>
-            <Label for="zip">ZIP</Label>
+            <Label for="zip">ZIP*</Label>
             <Input
               onChange={props.handleInputChange}
+              value={props.state.zip}
               type="text"
               name="zip"
               id="zipId"
@@ -135,9 +131,10 @@ const ApplicationForm = props => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="phone">Phone</Label>
+            <Label for="phone">Phone*</Label>
             <Input
               onChange={props.handleInputChange}
+              value={props.state.phone}
               type="text"
               name="phone"
               id="phoneId"
@@ -145,19 +142,21 @@ const ApplicationForm = props => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="email">Email</Label>
+            <Label for="email">Email*</Label>
             <Input
               onChange={props.handleInputChange}
+              value={props.state.email}
               type="text"
               name="email"
               id="emailId"
-              placeholder="hi@poo.com"
+              placeholder="hi@email.com"
             />
           </FormGroup>
           <FormGroup>
-            <Label for="employment">Employment Satus</Label>
+            <Label for="employment">Employment Status*</Label>
             <Input
               onChange={props.handleInputChange}
+              value={props.state.employment}
               type="select"
               name="employment"
               id="employmentId"
@@ -170,9 +169,10 @@ const ApplicationForm = props => {
             </Input>
           </FormGroup>
           <FormGroup>
-            <Label for="income">Income</Label>
+            <Label for="income">Income*</Label>
             <Input
               onChange={props.handleInputChange}
+              value={props.state.income}
               type="number"
               name="income"
               id="incomeId"
@@ -183,13 +183,15 @@ const ApplicationForm = props => {
             <Label for="info">Additional Information</Label>
             <Input
               onChange={props.handleInputChange}
+              value={props.state.info}
               type="textarea"
               name="info"
               id="additonalInfoId"
               placeholder="Any other information you want the landlord to know."
             />
           </FormGroup>
-          By clicking submit you are consenting to a criminal background check.
+          By clicking submit you are consenting to a criminal background
+          check.&nbsp;&nbsp;&nbsp;
           <Button color="primary">Submit</Button>
         </Form>
       </div>
