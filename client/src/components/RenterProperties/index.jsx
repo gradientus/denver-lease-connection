@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { Link } from 'react-router-dom';
 import {
   Col,
   Card,
@@ -12,7 +13,7 @@ import {
 const index = (props) => {
   return (
     <Col>
-
+      {/* TODO: need to add a conditional to test if the listing isActive = true then only return those listings */}
       {props.listings.length ? (
         <div>
           {props.listings.map(listing => (
@@ -26,7 +27,9 @@ const index = (props) => {
                 />
                 <p>{listing.details}</p>
                 <Button>Apply</Button>
-                <Button>Chat with {props.user.firstName}</Button>
+                <Button>
+                  <Link to={'/Chat'}>Chat with landlord</Link>
+                </Button>
               </CardBody>
               <CardFooter className="cardFooter">
                 <strong>{listing.price}</strong>

@@ -7,7 +7,8 @@ import RenterApplication from "./pages/RenterApplication";
 import LandlordAddListing from "./pages/LandlordAddListing";
 import RenterLanding from "./pages/RenterLanding";
 import FirstTimeUser from "./pages/FirstTimeUser";
-//import ChatLanding from "./pages/ChatLanding";
+import ChatLanding from "./pages/ChatLanding";
+import EditListing from "./pages/LandlordEditListing";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <Route exact path="/renterapp" component={RenterApplication} />
         <Route exact path="/renter" component={RenterLanding} />
         <Route exact path="/newUser" component={FirstTimeUser} />
-        {/* <Route exact path="/Chat" component={ChatLanding} /> */}
+        <Route exact path="/Chat" component={ChatLanding} />
+        <Route exact path="/editlisting" component={EditListing} />
       </div>
     </Router>
   );
