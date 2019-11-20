@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './style.css';
-import EditBtn from '../EditButton';
+//import EditBtn from '../EditButton';
 import InactiveBtn from '../InactiveButton';
-import { Card, CardHeader, CardBody, CardFooter } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { Card, CardHeader, CardBody, CardFooter, Button } from 'reactstrap';
 
 
 
@@ -21,12 +22,15 @@ const index = props => {
                             <CardBody>
                                 <img src="https://images.craigslist.org/00101_daosvbG18Yj_600x450.jpg" className="card-img-top" alt="placeholder" />
                                 <p>{listing.details}</p>
-                                <EditBtn>
+                                <Button >
+                                    <Link className="editBtn" to={"/editlisting/" + listing._id}>Edit listing</Link>
+                                </Button>
+                                {/* <EditBtn>
                                     {props.handleEdit}
-                                </EditBtn>
-                                <InactiveBtn>
+                                </EditBtn> */}
+                                {/* <InactiveBtn>
                                     {props.handleInactivate}
-                                </InactiveBtn>
+                                </InactiveBtn> */}
                             </CardBody>
                             <CardFooter className='cardFooter'><strong>{listing.price}</strong></CardFooter>
 

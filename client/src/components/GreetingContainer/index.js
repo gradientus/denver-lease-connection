@@ -7,7 +7,7 @@ const index = (props) => {
         <div>
             <div className="jumbotron">
 
-                <h4 className='welcome'>Welcome {props.user.firstName}!</h4>
+                <h4 className='welcome'>Welcome {props.currentUser.firstName}!</h4>
                 <br></br>
                 <a href='/addlisting'><Button color='primary'>Add New Listing</Button></a>
             </div>
