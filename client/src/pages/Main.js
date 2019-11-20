@@ -5,7 +5,7 @@ import GoogleSignIn from "../components/GoogleSignIn";
 
 const Main = () => {
   return (
-    <div>
+    <div id="main">
       <Navbar>{/* TODO: dynamically change links based on URL */}</Navbar>
 
       <GoogleSignIn />

@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
-import Navbar from '../components/Navbar';
-import NewUser from '../components/NewUser';
+import React, { Component } from "react";
+import Navbar from "../components/Navbar";
+import NewUser from "../components/NewUser";
+import Footer from "../components/Footer";
 
 class FirstTimeUser extends Component {
-    state = {
-        role: ""
-    }
+  state = {
+    role: ""
+  };
 
-
-    render() {
-        return (
-            <>
-                <Navbar />
-                <NewUser />
-            </>
-        );
-    }
+  render() {
+    return (
+      <>
+        <Navbar />
+        <NewUser />
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default FirstTimeUser;
