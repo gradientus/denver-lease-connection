@@ -35,6 +35,9 @@ const index = () => {
             <a className="nav-item nav-link text-white" href="/applicants">
               Applicants
             </a>
+            <a className="nav-item nav-link text-white" href="/Chat">
+              Chat
+            </a>
             <a className="nav-item nav-link text-white" href="/auth/logout">
               Logout
             </a>

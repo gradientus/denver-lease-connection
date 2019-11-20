@@ -3,6 +3,7 @@ import RenterNav from "../components/RenterNav";
 import RenterProperties from "../components/RenterProperties";
 import Footer from "../components/Footer";
 import API from "../util/APIListing";
+import APIUsers from "../util/APIUser";
 
 
 class RenterLanding extends Component {
@@ -12,13 +13,22 @@ class RenterLanding extends Component {
     details: "",
     price: "",
     isActive: true,
-    user: ""
+    user: "",
+    currentUser: ""
   };
 
+  loadCurrentUser = () => {
+    APIUsers.getCurrentUser()
+      .then(res =>
+        this.setState({ currentUser: res.data })
 
+      )
+      .catch(err => console.log(err));
+  }
 
 
   componentDidMount() {
+    this.loadCurrentUser();
     this.loadListings();
   }
 
@@ -30,6 +40,10 @@ class RenterLanding extends Component {
       )
       .catch(err => console.log(err));
   };
+
+  handleChatClick = event => {
+    event.preventDefault();
+  }
 
 
 
@@ -43,6 +57,7 @@ class RenterLanding extends Component {
           details={this.state.details}
           price={this.state.price}
           user={this.state.user}
+          currentUser={this.state.currentUser}
         />
         <Footer />
       </div>
