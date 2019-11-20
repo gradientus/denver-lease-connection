@@ -5,20 +5,17 @@ const index = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-primary bg-dark">
-        <a className="navbar-brand text-warning" href="#">
+        <a className="navbar-brand text-warning" href="/renter">
+          <img
+            src="./logo.png"
+            width="40"
+            height="32"
+            className="d-inline-block align-top"
+            alt=""
+          />
           Denver Lease Connection
         </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <a className="nav-item nav-link text-white" href="/renter">
