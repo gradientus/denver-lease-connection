@@ -14,8 +14,9 @@ import {
 
 //TODO: Add the reactstrap stuff
 
-const ApplicationForm = () => {
-  //TODO: Put all the JS in here
+const ApplicationForm = props => {
+  //QUESTION: Where do I plug in the API and the JS that goes with it?
+
   return (
     <div>
       <RenterNav />
@@ -24,7 +25,6 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="firstName">First Name</Label>
           <Input
-            value={props.firstName}
             onChange={props.handleInputChange}
             type="text"
             name="firstName"
@@ -35,7 +35,6 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="lastName">Last Name</Label>
           <Input
-            value={props.lastName}
             onChange={props.handleInputChange}
             type="text"
             name="lastName"
@@ -46,7 +45,6 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="address">Street Address</Label>
           <Input
-            value={props.address}
             onChange={props.handleInputChange}
             type="text"
             name="address"
@@ -57,7 +55,6 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="city">City</Label>
           <Input
-            value={props.city}
             onChange={props.handleInputChange}
             type="text"
             name="city"
@@ -68,7 +65,6 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="state">State</Label>
           <Input
-            value={props.state}
             onChange={props.handleInputChange}
             type="select"
             name="state"
@@ -131,7 +127,6 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="zip">ZIP</Label>
           <Input
-            value={props.zip}
             onChange={props.handleInputChange}
             type="text"
             name="zip"
@@ -142,7 +137,6 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="phone">Phone</Label>
           <Input
-            value={props.phone}
             onChange={props.handleInputChange}
             type="text"
             name="phone"
@@ -153,7 +147,6 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="email">Email</Label>
           <Input
-            value={props.email}
             onChange={props.handleInputChange}
             type="text"
             name="email"
@@ -164,7 +157,6 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="employment">Employment Satus</Label>
           <Input
-            value={props.employment}
             onChange={props.handleInputChange}
             type="select"
             name="employment"
@@ -180,7 +172,6 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="income">Income</Label>
           <Input
-            value={props.income}
             onChange={props.handleInputChange}
             type="number"
             name="income"
@@ -191,7 +182,6 @@ const ApplicationForm = () => {
         <FormGroup>
           <Label for="info">Additional Information</Label>
           <Input
-            value={props.info}
             onChange={props.handleInputChange}
             type="textarea"
             name="info"

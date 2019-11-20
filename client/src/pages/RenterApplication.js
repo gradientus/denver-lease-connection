@@ -19,10 +19,6 @@ class RenterApplication extends Component {
     info: ""
   };
 
-  //QUESTION: Do I add the API call here or in the application component upon click?
-
-  //TODO: Add the props this.state.___
-
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -33,12 +29,22 @@ class RenterApplication extends Component {
   render() {
     return (
       <div>
-        <ApplicationForm />
-        <Row>&nbsp; </Row>
-        <Row>&nbsp; </Row>
+        <ApplicationForm
+          firstName={this.state.firstName}
+          last={this.state.lastName}
+          address={this.state.address}
+          city={this.state.city}
+          state={this.state.state}
+          zip={this.state.zip}
+          phone={this.state.phone}
+          email={this.state.email}
+          employment={this.state.employment}
+          income={this.state.income}
+          info={this.state.info}
+        />
         <Row>&nbsp;</Row>
-        <Row>&nbsp; </Row>
-        <Row>&nbsp; </Row>
+        <Row>&nbsp;</Row>
+
         <Footer />
       </div>
     );
