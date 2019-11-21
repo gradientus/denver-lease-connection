@@ -7,10 +7,10 @@ import { Card, CardHeader, CardBody, CardFooter, Button } from 'reactstrap';
 
 
 
-//const numbers = [1, 10, 100, 1000, 10000];
 
 
 const index = props => {
+
     return (
         <>
 
@@ -23,7 +23,7 @@ const index = props => {
                                 <img src="https://images.craigslist.org/00101_daosvbG18Yj_600x450.jpg" className="card-img-top" alt="placeholder" />
                                 <p>{listing.details}</p>
                                 <Button >
-                                    <Link className="editBtn" to={"/editlisting/" + listing._id}>Edit listing</Link>
+                                    <Link className="editBtn" to={{ pathname: "/editlisting/" + listing._id, state: { listingId: listing._id } }}>Edit listing</Link>
                                 </Button>
                                 {/* <EditBtn>
                                     {props.handleEdit}
@@ -39,7 +39,8 @@ const index = props => {
                 </div>
             ) : (
                     <h3>No Results to Display</h3>
-                )}
+                )
+            }
 
 
         </>

@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/renter" component={RenterLanding} />
         <Route exact path="/newUser" component={FirstTimeUser} />
         <Route exact path="/Chat" component={ChatLanding} />
-        <Route exact path="/editlisting" component={EditListing} />
+        <Route exact path="/editlisting/:id" component={EditListing} />
 
       </div>
     </Router>

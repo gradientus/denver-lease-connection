@@ -7,6 +7,7 @@ export default {
     },
     //function to get listings by given id
     getListing: function (id) {
+        console.log('getListing route hit');
         return axios.get("/api/listings/" + id);
     },
     //TODO:function to get listings associated by user id
@@ -17,11 +18,15 @@ export default {
     deleteListing: function (id) {
         return axios.delete("/api/listings/" + id);
     },
-    //function to save a listing to the database
+    //function to create a new listing to the database
     saveListing: function (listingData) {
         //console.log("hitting the saveListing fiunction")
         return axios.post("/api/listings", listingData);
-
+    },
+    //function to update a listing
+    updateListing: function (listingData) {
+        console.log('update listing route')
+        return axios.put("/api/listings/" + listingData.id, listingData)
     }
 
 };
