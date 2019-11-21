@@ -43,6 +43,7 @@ class RenterLanding extends Component {
 
   handleChatClick = event => {
     event.preventDefault();
+
   }
 
 

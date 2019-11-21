@@ -33,8 +33,8 @@ const index = (props) => {
                     <InputGroup>
                         <Input
                             type="text"
-                            value={props.propertyName}
-                            onChange={props.handleInputChange}
+                            default={props.propertyName}
+                            onChange={props.handleEditChange}
                             name="propertyName"
                             placeholder="Property Name or Street Address"
                         />
@@ -50,8 +50,8 @@ const index = (props) => {
                     <InputGroup>
                         <Input
                             type="text"
-                            value={props.details}
-                            onChange={props.handleInputChange}
+                            default={props.details}
+                            onChange={props.handleEditChange}
                             name="details"
                             placeholder="Property Details"
                         />
@@ -67,8 +67,8 @@ const index = (props) => {
                     <InputGroup>
                         <Input
                             type="text"
-                            value={props.price}
-                            onChange={props.handleInputChange}
+                            default={props.price}
+                            onChange={props.handleEditChange}
                             name="price"
                             placeholder="Monthly rental amount"
                         />
