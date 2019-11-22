@@ -13,7 +13,7 @@ class ChatLanding extends Component {
     const results = await axios.get("/api/current_user");
     const currentUser = await results.data.googleId;
 
-    console.log(currentUser);
+    console.log("this is current user " + currentUser);
     this.setState({ currentUser: currentUser });
   }
 

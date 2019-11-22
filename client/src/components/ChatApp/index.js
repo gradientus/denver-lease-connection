@@ -17,7 +17,7 @@ const tokenProvider = new TokenProvider({
 function ChatApp(props) {
   // const results = axios.get("/api/current_user");
   // console.log(results);
-  let userId = props.currentUser;
+  let userId = "108735557576994882532";
   let otherUserId = "751962868886328";
   // Austin 108735557576994882532
   console.log(userId);
