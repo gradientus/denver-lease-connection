@@ -13,11 +13,12 @@ import { Col, Row, Card } from 'reactstrap';
 class LandlordListings extends Component {
     state = {
         listings: [],
+        id: "",
         propertyName: "",
         details: "",
         price: "",
         isActive: "",
-        currentUser: {}
+        currentUser: {},
     };
 
     loadCurrentUser = () => {
@@ -44,23 +45,18 @@ class LandlordListings extends Component {
             .catch(err => console.log(err));
     };
 
-
-    handleEdit = (e) => {
-        e.preventDefault();
-
-        //grab the item clicked by the item id and go to a new screen to edit the data
-        console.log('Edit button was clicked')
-    }
-
-    handleInactivate = (e) => {
-        e.preventDefault();
-        //toggle active / inactive
-        {
-            this.isActive ?
-                this.setState({ isActive: false }) : this.setState({ isActive: true })
-        }
-        console.log('button to inactivate was clicked')
-    }
+    // handleInactivate = (e) => {
+    //     console.log(this.props.match.listingId)
+    //     e.preventDefault();
+    //     console.log('button to inactivate was clicked')
+    //     if (this.state.isActive === true) {
+    //         API.updateListing({
+    //             id: this.state.id,
+    //             isActive: this.state.isActive,
+    //         })
+    //         this.setState({ isActive: false, btnTitle: "Inactive" })
+    //     }
+    // }
 
 
 
@@ -78,7 +74,8 @@ class LandlordListings extends Component {
                     price={this.state.price}
                     isActive={this.state.isActive}
                     handleEdit={this.handleEdit}
-                    handleInactivate={this.handleInactivate}
+                // handleInactivate={this.handleInactivate}
+                // btnTitle={this.state.btnTitle}
                 />
                 <Footer />
             </>

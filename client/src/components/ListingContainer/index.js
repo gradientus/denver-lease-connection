@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './style.css';
-//import EditBtn from '../EditButton';
-import InactiveBtn from '../InactiveButton';
 import { Link } from 'react-router-dom';
 import { Card, CardHeader, CardBody, CardFooter, Button } from 'reactstrap';
 
@@ -25,12 +23,11 @@ const index = props => {
                                 <Button >
                                     <Link className="editBtn" to={{ pathname: "/editlisting/" + listing._id, state: { listingId: listing._id } }}>Edit listing</Link>
                                 </Button>
-                                {/* <EditBtn>
-                                    {props.handleEdit}
-                                </EditBtn> */}
-                                {/* <InactiveBtn>
-                                    {props.handleInactivate}
-                                </InactiveBtn> */}
+
+                                {/* <Button
+                                    onClick={props.handleInactivate}>
+                                    {props.btnTitle}
+                                </Button> */}
                             </CardBody>
                             <CardFooter className='cardFooter'><strong>{listing.price}</strong></CardFooter>
 
