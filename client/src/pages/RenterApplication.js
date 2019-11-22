@@ -56,6 +56,7 @@ class RenterApplication extends Component {
         lastName: this.state.lastName,
         address: this.state.address,
         state: this.state.state,
+        city: this.state.city,
         zip: this.state.zip,
         phone: this.state.phone,
         email: this.state.email,
@@ -65,10 +66,6 @@ class RenterApplication extends Component {
       })
         .then(res => (window.location.href = "/renter"))
         .catch(err => console.log(err));
-
-      // API.getInmate(APP_ID, APP_KEY, timeStamp, ip, firstName, lastName, state)
-      //   .then(res => (window.location.href = "/renterapp")) //TODO: Is this right?
-      //   .catch(err => console.log(err));
     } else {
       alert("Please fill out all required fields.");
     }
