@@ -1,5 +1,5 @@
 import axios from "axios";
-import info from "../pages/RenterApplication";
+import info from "../pages/RenterApplication"; //QUESTION: Do I need this?
 require("dotenv").config();
 
 export default {
@@ -17,6 +17,9 @@ export default {
 
   //this is to post the applications save to the renter collections
   postApplications: function(applicationData) {
-    return axios.post("/api/renter", applicationData);
+    const paoo = axios.post("/api/renter", applicationData);
+    console.log(paoo);
+    //return axios.post("/api/renter", applicationData);
+    return paoo;
   }
 };

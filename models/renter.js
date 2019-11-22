@@ -16,7 +16,7 @@ const renterSchema = new Schema({
   date: { type: Date, default: Date.now },
   dob: { type: String, required: false },
   currentStatus: { type: String, required: false },
-  bookingDate: { type: String, required: flase },
+  bookingDate: { type: String, required: false },
   releaseDate: { type: String, required: false },
   bcType: { type: String, required: false }
 });

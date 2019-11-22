@@ -5,6 +5,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const listings = require("./routes/listingRoutes");
+const renters = require("./routes/renterRoutes");
+const pmdb = require("./models/Renter");
 const path = require("path");
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -46,6 +48,7 @@ require("./routes/authRoutes")(app);
 //routes for listings
 app.use("/api/listings", listings);
 app.use("/api/listingsByUser", listings);
+app.use("/api/renter", renters);
 
 //Middleware
 
