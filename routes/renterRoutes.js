@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const renterController = require("../controllers/renterController");
-const db = require("../models/Renter");
+const db = require("../models/renter");
 
 router
   .route("/")
