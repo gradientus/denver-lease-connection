@@ -1,6 +1,6 @@
 # Denver Lease Connection
 
-Concept: A web application that connects renters and sub-leasors.
+Concept: A web application that connects tennants in need of a sub-lease and sub-leasors in need of a tennant.
 
 ## Deployed Application
 
@@ -8,17 +8,38 @@ https://denver-lease-connection.herokuapp.com/
 
 ### Instructions
 
-Sub-leasor:
+1. Log in with you Google username and password.
+2. Choose either landlor or tennant.
 
-1. Do this.
-2. Do that.
-3. Try again.
+Landlord:
+
+1. To add a new listing:
+   a. Click add new listing button.
+   b. Fill in the property information.
+   c. Click add listing button.
+2. To see/edit a list of all listings:
+   a. Click listings in the navbar.
+   b. Click the edit button on the property you want to change.
+   c. Fill in the form.
+   d. Click add listing.
+
+3. To see a list of applicants:
+   a. Click applicants in the navbar.
+   b. Look at the list of all applicants.
+   c. Click the applicant you are interested in.
+   d. Review the information on that applicant.
 
 Renter:
 
-1. Do that.
-2. Do this.
-3. Do this again.
+1. See all properties available:
+   a. Click the see properties link in the navbar.
+   b. Click the apply button to let the landlord know you are interested in that property.
+   c. Click the chat with landlord button to chat with the landlord.
+
+2. Fill out a formal application:
+   a. Click the renter application from the navbar.
+   b. Fill in all required fields.
+   c. The information will be stored and the landlord will have access to that information, including a criminal background check.
 
 ## Built With
 
