@@ -2,7 +2,6 @@ import React from "react";
 import { ChatkitProvider, TokenProvider } from "@pusher/chatkit-client-react";
 import axios from "axios";
 import APIUsers from "../../util/APIUser";
-
 import "./style.css";
 import ChatBox from "../ChatBox";
 // import UserList from './components/UserList';
@@ -20,14 +19,10 @@ function ChatApp(props) {
   // console.log(results);
   let userId = props.currentUser;
   let otherUserId = "751962868886328";
-  // Barbara 113647198101532205328
-  // Phil 116916979726097879247
   // Austin 108735557576994882532
   console.log(userId);
   console.log(otherUserId);
   return (
-    // <div>Test Component</div>
-
     <div className="App">
       <div className="App__chatwindow">
         <ChatkitProvider

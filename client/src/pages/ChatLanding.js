@@ -2,44 +2,26 @@ import React, { Component } from "react";
 import ChatApp from "../components/ChatApp";
 import RenterNav from "../components/RenterNav";
 import Footer from "../components/Footer";
-import API from "../util/APIListing";
-import APIUsers from "../util/APIUser";
+import axios from "axios";
 
 class ChatLanding extends Component {
   state = {
-    otherUser: "",
     currentUser: ""
   };
 
-  loadCurrentUser = () => {
-    APIUsers.getCurrentUser()
-      .then(res => this.setState({ currentUser: res.data.googleId }))
-      .catch(err => console.log(err));
-  };
+  async componentDidMount() {
+    const results = await axios.get("/api/current_user");
+    const currentUser = await results.data.googleId;
 
-  componentDidMount() {
-    this.loadCurrentUser();
-    this.loadListings();
+    console.log(currentUser);
+    this.setState({ currentUser: currentUser });
   }
-
-  loadListings = () => {
-    API.getListings()
-      .then(res =>
-        this.setState({
-          otherUser: res.data.user
-        })
-      )
-      .catch(err => console.log(err));
-  };
 
   render() {
     return (
       <div>
         <RenterNav />
-        <ChatApp
-          otherUser={this.state.otherUser}
-          currentUser={this.state.currentUser}
-        />
+        <ChatApp currentUser={this.state.currentUser} />
         <Footer />
       </div>
     );
