@@ -17,9 +17,8 @@ class LandlordListings extends Component {
         propertyName: "",
         details: "",
         price: "",
-        isActive: true,
+        isActive: "",
         currentUser: {},
-        btnTitle: "Active"
     };
 
     loadCurrentUser = () => {
@@ -46,18 +45,18 @@ class LandlordListings extends Component {
             .catch(err => console.log(err));
     };
 
-    handleInactivate = (e) => {
-        console.log(this.props.match.listingId)
-        e.preventDefault();
-        console.log('button to inactivate was clicked')
-        if (this.state.isActive === true) {
-            API.updateListing({
-                id: this.state.id,
-                isActive: this.state.isActive,
-            })
-            this.setState({ isActive: false, btnTitle: "Inactive" })
-        }
-    }
+    // handleInactivate = (e) => {
+    //     console.log(this.props.match.listingId)
+    //     e.preventDefault();
+    //     console.log('button to inactivate was clicked')
+    //     if (this.state.isActive === true) {
+    //         API.updateListing({
+    //             id: this.state.id,
+    //             isActive: this.state.isActive,
+    //         })
+    //         this.setState({ isActive: false, btnTitle: "Inactive" })
+    //     }
+    // }
 
 
 
@@ -75,8 +74,8 @@ class LandlordListings extends Component {
                     price={this.state.price}
                     isActive={this.state.isActive}
                     handleEdit={this.handleEdit}
-                    handleInactivate={this.handleInactivate}
-                    btnTitle={this.state.btnTitle}
+                // handleInactivate={this.handleInactivate}
+                // btnTitle={this.state.btnTitle}
                 />
                 <Footer />
             </>
