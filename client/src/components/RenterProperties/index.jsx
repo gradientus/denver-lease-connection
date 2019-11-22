@@ -15,7 +15,7 @@ const index = props => {
     <Col>
       {/* TODO: need to add a conditional to test if the listing isActive = true then only return those listings */}
       {props.listings.length ? (
-        <div>
+        <div className="cardDiv">
           {props.listings.map(listing => (
             <Card key={listing._id}>
               <CardHeader className="cardHeader">
@@ -29,8 +29,8 @@ const index = props => {
                 />
                 <p>{listing.details}</p>
                 <Button>Apply</Button>
-                <Button>
-                  <Link to={"/Chat"}>Chat with landlord</Link>
+                <Button className="chatBtn">
+                  <Link className="chatLink" to={"/Chat"}>Chat with landlord</Link>
                 </Button>
               </CardBody>
               <CardFooter className="cardFooter">
@@ -40,15 +40,12 @@ const index = props => {
           ))}
         </div>
       ) : (
-        <h3>No results to Display</h3>
-      )}
+          <h3>No results to Display</h3>
+        )}
     </Col>
   );
 };
 
 export default index;
 
-//TODO: Need to track the onclick here, this puts the user into applicants
-//TODO: Need to pull the information from the MongoDB
-//TODO: Need to loop through all the active properties
-//TODO: Need to pull in props?
+

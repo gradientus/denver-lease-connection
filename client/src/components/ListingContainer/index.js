@@ -24,10 +24,10 @@ const index = props => {
                                     <Link className="editBtn" to={{ pathname: "/editlisting/" + listing._id, state: { listingId: listing._id } }}>Edit listing</Link>
                                 </Button>
 
-                                <Button
+                                {/* <Button
                                     onClick={props.handleInactivate}>
                                     {props.btnTitle}
-                                </Button>
+                                </Button> */}
                             </CardBody>
                             <CardFooter className='cardFooter'><strong>{listing.price}</strong></CardFooter>
 
