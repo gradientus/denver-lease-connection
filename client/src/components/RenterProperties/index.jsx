@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import {
   Col,
   Card,
@@ -10,7 +10,7 @@ import {
   Button
 } from "reactstrap";
 
-const index = (props) => {
+const index = props => {
   return (
     <Col>
       {/* TODO: need to add a conditional to test if the listing isActive = true then only return those listings */}
@@ -18,7 +18,9 @@ const index = (props) => {
         <div>
           {props.listings.map(listing => (
             <Card key={listing._id}>
-              <CardHeader className="cardHeader">{listing.propertyName}</CardHeader>
+              <CardHeader className="cardHeader">
+                {listing.propertyName}
+              </CardHeader>
               <CardBody>
                 <img
                   src="https://images.craigslist.org/00101_daosvbG18Yj_600x450.jpg"
@@ -28,19 +30,18 @@ const index = (props) => {
                 <p>{listing.details}</p>
                 <Button>Apply</Button>
                 <Button>
-                  <Link to={'/Chat'}>Chat with landlord</Link>
+                  <Link to={"/Chat"}>Chat with landlord</Link>
                 </Button>
               </CardBody>
               <CardFooter className="cardFooter">
                 <strong>{listing.price}</strong>
-
               </CardFooter>
             </Card>
           ))}
         </div>
       ) : (
-          <h3>No results to Display</h3>
-        )}
+        <h3>No results to Display</h3>
+      )}
     </Col>
   );
 };
