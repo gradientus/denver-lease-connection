@@ -6,6 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const listings = require("./routes/listingRoutes");
 const renters = require("./routes/renterRoutes");
+const pmdb = require("./models/Renter");
 const path = require("path");
 
 app.use(bodyParser.urlencoded({ extended: true }));

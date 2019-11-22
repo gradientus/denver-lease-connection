@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const renterController = require("../controllers/renterController");
+const db = require("../models/Renter");
 
 router
   .route("/api/renter")
