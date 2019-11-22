@@ -16,7 +16,7 @@ const ApplicationForm = props => {
             <Label for="firstName">First Name*</Label>
             <Input
               onChange={props.handleInputChange}
-              value={props.state.firstName}
+              value={props.firstName}
               type="text"
               name="firstName"
               id="firstNameId"
@@ -27,7 +27,7 @@ const ApplicationForm = props => {
             <Label for="lastName">Last Name*</Label>
             <Input
               onChange={props.handleInputChange}
-              value={props.state.lastName}
+              value={props.lastName}
               type="text"
               name="lastName"
               id="lastNameId"
@@ -38,7 +38,7 @@ const ApplicationForm = props => {
             <Label for="address">Street Address*</Label>
             <Input
               onChange={props.handleInputChange}
-              value={props.state.address}
+              value={props.address}
               type="text"
               name="address"
               id="addressId"
@@ -49,7 +49,7 @@ const ApplicationForm = props => {
             <Label for="city">City*</Label>
             <Input
               onChange={props.handleInputChange}
-              value={props.state.city}
+              value={props.city}
               type="text"
               name="city"
               id="cityId"
@@ -60,7 +60,7 @@ const ApplicationForm = props => {
             <Label for="state">State*</Label>
             <Input
               onChange={props.handleInputChange}
-              value={props.state.state}
+              value={props.state}
               type="select"
               name="state"
               id="stateId"
@@ -123,7 +123,7 @@ const ApplicationForm = props => {
             <Label for="zip">ZIP*</Label>
             <Input
               onChange={props.handleInputChange}
-              value={props.state.zip}
+              value={props.zip}
               type="text"
               name="zip"
               id="zipId"
@@ -134,7 +134,7 @@ const ApplicationForm = props => {
             <Label for="phone">Phone*</Label>
             <Input
               onChange={props.handleInputChange}
-              value={props.state.phone}
+              value={props.phone}
               type="text"
               name="phone"
               id="phoneId"
@@ -145,7 +145,7 @@ const ApplicationForm = props => {
             <Label for="email">Email*</Label>
             <Input
               onChange={props.handleInputChange}
-              value={props.state.email}
+              value={props.email}
               type="text"
               name="email"
               id="emailId"
@@ -156,7 +156,7 @@ const ApplicationForm = props => {
             <Label for="employment">Employment Status*</Label>
             <Input
               onChange={props.handleInputChange}
-              value={props.state.employment}
+              value={props.employment}
               type="select"
               name="employment"
               id="employmentId"
@@ -172,7 +172,7 @@ const ApplicationForm = props => {
             <Label for="income">Income*</Label>
             <Input
               onChange={props.handleInputChange}
-              value={props.state.income}
+              value={props.income}
               type="number"
               name="income"
               id="incomeId"
@@ -183,7 +183,7 @@ const ApplicationForm = props => {
             <Label for="info">Additional Information</Label>
             <Input
               onChange={props.handleInputChange}
-              value={props.state.info}
+              value={props.info}
               type="textarea"
               name="info"
               id="additonalInfoId"
@@ -192,7 +192,9 @@ const ApplicationForm = props => {
           </FormGroup>
           By clicking submit you are consenting to a criminal background
           check.&nbsp;&nbsp;&nbsp;
-          <Button color="primary">Submit</Button>
+          <Button color="primary" onClick={props.handleFormSubmit}>
+            Submit
+          </Button>
         </Form>
       </div>
     </div>
