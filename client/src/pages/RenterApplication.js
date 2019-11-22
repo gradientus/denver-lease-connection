@@ -3,6 +3,7 @@ import ApplicationForm from "../components/ApplicationForm";
 import API from "../util/API";
 import Footer from "../components/Footer";
 import { Col, Row } from "reactstrap";
+require("dotenv").config();
 
 class RenterApplication extends Component {
   state = {
@@ -19,16 +20,15 @@ class RenterApplication extends Component {
     info: ""
   };
 
-  postApplication = () => {
-    API.postApplications()
-      .then(res => this.setState({ user: res.data }))
-      .catch(err => console.log(err));
-  };
+  // postApplication = () => {
+  //   API.postApplications()
+  //     .then(res => this.setState({ }))
+  //     .catch(err => console.log(err));
+  // };
 
-  componentDidMount() {
-    this.postApplication();
-  }
-  //QUESTION: Do I need didmount or willmount in here?
+  // componentDidMount() {
+  //   this.postApplication();
+  // }
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -63,8 +63,12 @@ class RenterApplication extends Component {
         employment: this.state.employment,
         info: this.state.info
       })
-        .then(res => (window.location.href = "/renterapp")) //QUESTION:
+        .then(res => (window.location.href = "/renter"))
         .catch(err => console.log(err));
+
+      // API.getInmate(APP_ID, APP_KEY, timeStamp, ip, firstName, lastName, state)
+      //   .then(res => (window.location.href = "/renterapp")) //TODO: Is this right?
+      //   .catch(err => console.log(err));
     } else {
       alert("Please fill out all required fields.");
     }
@@ -85,6 +89,8 @@ class RenterApplication extends Component {
           employment={this.state.employment}
           income={this.state.income}
           info={this.state.info}
+          handleFormSubmit={this.handleFormSubmit}
+          handleInputChange={this.handleInputChange}
         />
         <Row>&nbsp;</Row>
         <Row>&nbsp;</Row>
