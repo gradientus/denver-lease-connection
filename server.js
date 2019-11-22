@@ -6,7 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const listings = require("./routes/listingRoutes");
 const renters = require("./routes/renterRoutes");
-const pmdb = require("./models/Renter");
+// const pmdb = require("./models/Renter");
 const path = require("path");
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 //added mlabs URI to .env
 const mongoose = require("mongoose");
 mongoose.connect(
-  process.env.oldmongoURI || "mongodb://localhost/denverleaseconnection"
+  process.env.mongoURI || "mongodb://localhost/denverleaseconnection"
 );
 const db = mongoose.connection;
 db.on("error", error => console.error(error));
