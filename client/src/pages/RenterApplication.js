@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ApplicationForm from "../components/ApplicationForm";
-//import API from "../util/API";
+import API from "../util/API";
 import Footer from "../components/Footer";
 import { Col, Row } from "reactstrap";
 
@@ -19,11 +19,55 @@ class RenterApplication extends Component {
     info: ""
   };
 
+  postApplication = () => {
+    API.postApplications()
+      .then(res => this.setState({ user: res.data }))
+      .catch(err => console.log(err));
+  };
+
+  componentDidMount() {
+    this.postApplication();
+  }
+  //QUESTION: Do I need didmount or willmount in here?
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (
+      this.state.firstName &&
+      this.state.lastName &&
+      this.state.address &&
+      this.state.city &&
+      this.state.state &&
+      this.state.zip &&
+      this.state.phone &&
+      this.state.email &&
+      this.state.income &&
+      this.state.employment
+    ) {
+      API.postApplications({
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        address: this.state.address,
+        state: this.state.state,
+        zip: this.state.zip,
+        phone: this.state.phone,
+        email: this.state.email,
+        income: this.state.income,
+        employment: this.state.employment,
+        info: this.state.info
+      })
+        .then(res => (window.location.href = "/renterapp")) //QUESTION:
+        .catch(err => console.log(err));
+    } else {
+      alert("Please fill out all required fields.");
+    }
   };
 
   render() {

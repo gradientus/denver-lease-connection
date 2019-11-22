@@ -7,26 +7,28 @@ import EditForm from "../components/ListingEditForm";
 
 class LandlordEditListing extends Component {
     state = {
+        id: "",
         propertyName: "",
         details: "",
         price: ""
     };
 
-    componentWillMount() {
+    componentDidMount() {
         this.loadListingToEdit();
     }
 
+
+
     loadListingToEdit = () => {
-        API.getListing()
-            .then(res =>
-                this.setState({ propertyName: "", details: "", price: "" })
-            )
-            .catch(err => console.log(err));
+        const listingId = this.props.match.params.id
+        //console.log(listingId + "that's the listing id")
+        this.setState({ id: listingId })
+
     };
 
 
     //handle data typed into form to set to state
-    handleInputChange = event => {
+    handleEditChange = event => {
         //create variables for the data that will be saved to state
         const { name, value } = event.target;
         this.setState({
@@ -37,8 +39,10 @@ class LandlordEditListing extends Component {
     //handle the form submit button
     handleFormSubmit = event => {
         event.preventDefault();
+        console.log('handle form submit');
         if (this.state.propertyName && this.state.details && this.state.price) {
-            API.saveListing({
+            API.updateListing({
+                id: this.state.id,
                 propertyName: this.state.propertyName,
                 details: this.state.details,
                 price: this.state.price,
@@ -62,6 +66,8 @@ class LandlordEditListing extends Component {
                     propertyName={this.state.propertyName}
                     details={this.state.details}
                     price={this.state.price}
+                    handleEditChange={this.handleEditChange}
+                    handleFormSubmit={this.handleFormSubmit}
                 />
                 <Footer />
             </>
