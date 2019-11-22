@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 //added mlabs URI to .env
 const mongoose = require("mongoose");
 mongoose.connect(
-  process.env.oldmongoURI || "mongodb://localhost/denverleaseconnection"
+  process.env.mongoURI || "mongodb://localhost/denverleaseconnection"
 );
 const db = mongoose.connection;
 db.on("error", error => console.error(error));
