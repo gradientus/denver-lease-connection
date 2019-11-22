@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import API from "../util/APIListing";
 import APIUsers from "../util/APIUser";
 
-
 class RenterLanding extends Component {
   state = {
     listings: [],
@@ -19,34 +18,36 @@ class RenterLanding extends Component {
 
   loadCurrentUser = () => {
     APIUsers.getCurrentUser()
-      .then(res =>
-        this.setState({ currentUser: res.data })
-
-      )
+      .then(res => this.setState({ currentUser: res.data.googleId }))
       .catch(err => console.log(err));
-  }
-
+  };
 
   componentDidMount() {
     this.loadCurrentUser();
     this.loadListings();
   }
 
-
   loadListings = () => {
     API.getListings()
       .then(res =>
-        this.setState({ listings: res.data, propertyName: "", details: "", price: "", isActive: true, user: "" })
+        this.setState({
+          listings: res.data,
+          propertyName: "",
+          details: "",
+          price: "",
+          isActive: true,
+          user: ""
+        })
       )
       .catch(err => console.log(err));
   };
 
   handleChatClick = event => {
-    event.preventDefault();
-
-  }
-
-
+    event
+      .preventDefault()
+      .then((window.location.href = "/chat"))
+      .catch(err => console.log(err));
+  };
 
   render() {
     return (
@@ -59,6 +60,7 @@ class RenterLanding extends Component {
           price={this.state.price}
           user={this.state.user}
           currentUser={this.state.currentUser}
+          handleChatClick={this.state.handleChatClick}
         />
         <Footer />
       </div>
@@ -67,4 +69,3 @@ class RenterLanding extends Component {
 }
 
 export default RenterLanding;
-
